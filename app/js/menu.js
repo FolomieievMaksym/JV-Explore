@@ -12,7 +12,7 @@ function burgerToggle(e) {
       } else {
          openBurger();
       }
-   } else if (!e.target.closest(".burger")) {
+   } else if (!e.target.closest(".burger") && !e.target.closest(".menu__list")) {
       closeBurger();
    }
 }
