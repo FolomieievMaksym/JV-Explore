@@ -1,0 +1,59 @@
+section {
+   &:nth-child(odd) {
+      background-color: $lightGrey;
+      background-color: grey;
+      min-height: 300px;
+   }
+   &:nth-child(even) {
+      min-height: 300px;
+   }
+}
+.home {
+   position: relative;
+   &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border: 0 solid transparent;
+      border-right-width: 0px;
+      border-left-width: 100vw;
+      border-bottom: 10vw solid #fff;
+   }
+   &__container {
+      padding-top: 30px;
+      @extend %container;
+   }
+}
+.about {
+   position: relative;
+   &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border: 0 solid transparent;
+      border-bottom-width: 0px;
+      border-top-width: 10vw;
+      border-left: 100vw solid grey;
+   }
+}
+.products {
+   position: relative;
+   &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border: 0 solid transparent;
+      border-right-width: 0px;
+      border-left-width: 100vw;
+      border-bottom: 10vw solid #fff;
+   }
+}

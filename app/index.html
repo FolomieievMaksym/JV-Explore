@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+@@include('./components/structure/_head.html', {
+'lang': 'en',
+'css': 'main',
+'title': 'JV-Explore',
+'swiper': 'false',
+})
+<!-- todo указать нужное значение дял подключени\отключения свайпера -->
+
+<body class="main">
+	<div class="wrapper">
+		@@include('./components/structure/_header.html')
+		<main>
+			<section id="home" class="home">
+				<div class="home__container">
+
+				</div>
+			</section>
+			<section id="about-us" class="about">
+				<div class="about__container">
+
+				</div>
+			</section>
+			<section id="our-products" class="products">
+				<div class="products__container">
+
+				</div>
+			</section>
+			<section id="our-services" class="services">
+				<div class="services__container">
+
+				</div>
+			</section>
+			<section id="contacts" class="contacts"></section>
+		</main>
+		@@include('./components/structure/_footer.html')
+	</div>
+	@@include('./components/structure/_scripts.html', {
+	'swiper': 'false',
+	'script': 'script',
+	})
+	<!-- todo указать нужное значение дял подключения\отключения свайпера -->
+</body>
+
+</html>
