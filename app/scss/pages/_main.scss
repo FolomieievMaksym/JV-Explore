@@ -2,12 +2,16 @@ section {
    &:nth-child(odd) {
       min-height: 300px;
       background-color: $light;
+      background-color: $grey;
       color: $greyText;
+      color: $light;
    }
    &:nth-child(even) {
       min-height: 300px;
       background-color: $grey;
+      background-color: $light;
       color: $light;
+      color: $greyText;
    }
 }
 
@@ -88,6 +92,7 @@ section {
       border-right-width: 0px;
       border-left-width: 100vw;
       border-bottom: 10vw solid $grey;
+      border-bottom: 10vw solid $light;
    }
    // .home__container
    &__container {
@@ -244,10 +249,10 @@ section {
       width: 300%;
       height: 300%;
       transform: translateY(-50%) rotate(-3deg);
-      background: $lightGrey;
       background: $grey;
+      background-color: $light;
       border-radius: 50%;
-      opacity: 0.2;
+      // opacity: 0.2;
    }
    &:after {
       content: "";
@@ -261,6 +266,7 @@ section {
       border-top-width: 0px;
       border-bottom-width: 10vw;
       border-right: 100vw solid $grey;
+      border-right: 100vw solid $light;
    }
    // .products__container
 
@@ -333,5 +339,6 @@ section {
       border-right-width: 0px;
       border-left-width: 100vw;
       border-bottom: 10vw solid $grey;
+      border-bottom: 10vw solid $light;
    }
 }
