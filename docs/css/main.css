@@ -795,22 +795,9 @@ section:nth-child(even) {
   position: relative;
 }
 
-.home:after {
-  content: "";
-  position: absolute;
-  bottom: 0px;
-  left: 0;
-  width: 0;
-  height: 0;
-  border: 0 solid transparent;
-  border-right-width: 0px;
-  border-left-width: 100vw;
-  border-bottom: 10vw solid #485162;
-}
-
 .home__container {
   padding-top: 2vw;
-  padding-bottom: 12vw;
+  padding-bottom: 2vw;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
@@ -870,7 +857,21 @@ section:nth-child(even) {
   z-index: 1;
 }
 
+.about:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-left-width: 0px;
+  border-right-width: 100vw;
+  border-top: 10vw solid #fff;
+}
+
 .about__container {
+  padding-top: 10vw;
   padding-bottom: 2vw;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
