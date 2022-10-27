@@ -2,12 +2,8 @@
    padding-left: percent(15, 320);
    padding-right: percent(15, 320);
    @media (min-width: 769px) {
-      padding-left: percent(30, 1200);
-      padding-right: percent(30, 1200);
-   }
-   @media (min-width: 1200px) {
-      padding-left: percent(50, 1440);
-      padding-right: percent(50, 1440);
+      padding-left: percent(30, 1024);
+      padding-right: percent(30, 1024);
    }
 }
 %grad-bg {

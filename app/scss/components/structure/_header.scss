@@ -1,10 +1,10 @@
 .header {
-   background-color: $light;
    position: fixed;
    z-index: 5;
    width: 100%;
    opacity: 1;
    transition: opacity 0.3s ease 0s;
+
    &:hover {
       opacity: 1 !important;
    }
@@ -22,7 +22,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: $light; // todo Изменить на нужный цвет подложки
+      background-color: $grey; // todo Изменить на нужный цвет подложки
       z-index: 0;
       transition: z-index 2s ease 0.8s;
    }
@@ -54,6 +54,7 @@
       display: flex;
       justify-content: space-between; // todo Позиционируем элементы по оси Х
       column-gap: 20px;
+      width: 100%;
       @media (max-width: 768px) {
          align-items: flex-start;
       }
@@ -160,6 +161,7 @@
          padding-top: 5px;
          padding-bottom: 5px;
          transition: all 0.3s ease;
+         color: $lightGrey;
          &:hover {
             color: $green;
             &:after {
@@ -203,15 +205,13 @@
       display: none;
    }
    // todo Если нужно изменить цвет бургера при наведении
-   /* 
    &:hover .burger__wrapper {
       span,
       &:before,
       &:after {
-         background-color: orange; 
+         background-color: $green;
       }
    }
-	*/
    &__wrapper {
       width: 30px; // todo Макетная ширина бургера
       height: 20px; // todo Макетная высота бургера

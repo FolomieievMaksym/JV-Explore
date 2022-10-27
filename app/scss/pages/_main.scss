@@ -1,59 +1,337 @@
 section {
    &:nth-child(odd) {
-      background-color: $lightGrey;
-      background-color: grey;
       min-height: 300px;
+      background-color: $light;
+      color: $greyText;
    }
    &:nth-child(even) {
       min-height: 300px;
+      background-color: $grey;
+      color: $light;
    }
 }
+
+.title {
+   font-weight: 700;
+   @include fl(44);
+}
+.content {
+   grid-column: span 12;
+   display: grid;
+   grid-template-columns: repeat(12, 1fr);
+   align-items: flex-end;
+   align-items: flex-start;
+}
+.subtitle {
+   font-weight: 600;
+   @include fl(36);
+}
+
+.items {
+   display: grid;
+   grid-template-columns: 1fr;
+   row-gap: 30px;
+   // .about-items__item
+
+   &__item {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      column-gap: 15px;
+   }
+
+   // .about-items__icon
+
+   &__icon {
+      flex: 0 0 60px;
+      img {
+         max-width: 100%;
+      }
+   }
+
+   // .about-items__text
+
+   &__text {
+      align-self: center;
+      @include fl(26);
+   }
+}
+.parallax {
+   position: absolute;
+   z-index: 1;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   // .parallax__image
+   &__image {
+      position: absolute;
+      img {
+         max-width: 5vw;
+      }
+      // .parallax__image_1
+   }
+}
+// ! Home === Home === Home === Home === Home === Home === Home
+// ! Home === Home === Home === Home === Home === Home === Home
+// ! Home === Home === Home === Home === Home === Home === Home
 .home {
    position: relative;
    &:after {
       content: "";
       position: absolute;
-      bottom: 0;
+      bottom: 0px;
       left: 0;
       width: 0;
       height: 0;
       border: 0 solid transparent;
       border-right-width: 0px;
       border-left-width: 100vw;
-      border-bottom: 10vw solid #fff;
+      border-bottom: 10vw solid $grey;
    }
+   // .home__container
    &__container {
-      padding-top: 30px;
       @extend %container;
+      padding-top: 2vw;
+      padding-bottom: 12vw;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+   }
+
+   // .home__title
+
+   &__title {
+      grid-column: 1/12;
+      margin-bottom: 24px;
+   }
+
+   // .home__content
+
+   &__content {
+   }
+
+   // .home__left
+
+   &__left {
+      grid-column: 1/6;
+   }
+
+   // .home__left-wrapper
+
+   &__left-wrapper {
+      position: relative;
+   }
+
+   &__parallax {
+   }
+
+   &__parallax-image {
+      &_1 {
+         top: 100%;
+         left: 0;
+         transform: translate(-50%, -50%);
+      }
+      &_2 {
+         top: 0;
+         left: 100%;
+         transform: translate(-50%, -50%);
+      }
+   }
+
+   // .home__image
+
+   &__image {
+      position: relative;
+      padding-bottom: percent(400, 700);
+
+      img {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: center;
+      }
+   }
+
+   // .home__right
+
+   &__right {
+      grid-column: 8/12;
+   }
+
+   // .home__subtitle
+
+   &__subtitle {
+      margin-bottom: 20px;
+   }
+
+   // .home__text
+
+   &__text {
    }
 }
+// ! About === About === About === About === About === About ===
+// ! About === About === About === About === About === About ===
+// ! About === About === About === About === About === About ===
 .about {
    position: relative;
+   z-index: 1;
+   // .about__container
+   &__container {
+      @extend %container;
+      // margin-top: -2vw;
+      // padding-top: 2vw;
+      padding-bottom: 2vw;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+   }
+
+   // .about__title
+
+   &__title {
+      text-align: right;
+      margin-top: -2vw;
+      margin-bottom: 24px;
+      grid-column: 1/12;
+   }
+
+   // .about__content
+
+   &__content {
+   }
+
+   // .about__left
+
+   &__left {
+      grid-column: 1/6;
+   }
+
+   // .about__right
+
+   &__right {
+      grid-column: 7/13;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 20px;
+   }
+
+   // .about__subtitle
+
+   &__subtitle {
+      margin-bottom: 20px;
+   }
+
+   // .about__text
+
+   &__text {
+   }
+}
+// ! Products === Products === Products === Products === Products
+// ! Products === Products === Products === Products === Products
+// ! Products === Products === Products === Products === Products
+.products {
+   // overflow-y: hidden;
+   // background-color: $lightGrey !important;
+   overflow: hidden;
+   position: relative;
+   z-index: 1;
+   &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 300%;
+      height: 300%;
+      transform: translateY(-50%) rotate(-3deg);
+      background: $lightGrey;
+      background: $grey;
+      border-radius: 50%;
+      opacity: 0.2;
+   }
    &:after {
       content: "";
       position: absolute;
-      bottom: 0;
+      z-index: 1;
+      top: 0px;
       left: 0;
       width: 0;
       height: 0;
       border: 0 solid transparent;
-      border-bottom-width: 0px;
-      border-top-width: 10vw;
-      border-left: 100vw solid grey;
+      border-top-width: 0px;
+      border-bottom-width: 10vw;
+      border-right: 100vw solid $grey;
+   }
+   // .products__container
+
+   &__container {
+      @extend %container;
+      // padding-top: 2vw;
+      // margin-top: -10vw;
+      padding-bottom: 10vw;
+      padding-top: 10vw;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      position: relative;
+      z-index: 1;
+   }
+
+   // .products__title
+
+   &__title {
+      margin-top: -2vw;
+      grid-column: 1/12;
+      margin-bottom: 24px;
+   }
+
+   // .products__content
+
+   &__content {
+   }
+
+   // .products__left
+
+   &__left {
+      grid-column: 1/6;
+   }
+
+   // .products__right
+
+   &__right {
+      grid-column: 8/12;
+   }
+
+   // .products__image
+
+   &__image {
+      position: relative;
+      padding-bottom: percent(300, 600);
+      margin-bottom: 2vw;
+
+      img {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: center;
+      }
    }
 }
-.products {
+.services {
    position: relative;
+   z-index: 1;
    &:after {
       content: "";
       position: absolute;
-      bottom: 0;
+      bottom: 100%;
       left: 0;
       width: 0;
       height: 0;
       border: 0 solid transparent;
       border-right-width: 0px;
       border-left-width: 100vw;
-      border-bottom: 10vw solid #fff;
+      border-bottom: 10vw solid $grey;
    }
 }

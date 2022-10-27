@@ -159,8 +159,10 @@ body.lock {
 }
 
 body {
+  background-color: #ddd;
+  background-color: #fff;
   font-family: "Nunito";
-  font-size: 1rem;
+  font-size: 1.625rem;
   line-height: 1.25;
 }
 
@@ -177,7 +179,6 @@ main {
 }
 
 .header {
-  background-color: #fff;
   position: fixed;
   z-index: 5;
   width: 100%;
@@ -201,7 +202,7 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  background-color: #485162;
   z-index: 0;
   transition: z-index 2s ease 0.8s;
 }
@@ -230,6 +231,7 @@ main {
   justify-content: space-between;
   -moz-column-gap: 20px;
   column-gap: 20px;
+  width: 100%;
 }
 
 .header__logo {
@@ -264,6 +266,7 @@ main {
   padding-top: 5px;
   padding-bottom: 5px;
   transition: all 0.3s ease;
+  color: #ddd;
   display: block;
   position: relative;
 }
@@ -299,19 +302,16 @@ main {
   justify-content: center;
   transition: all 0.3s ease;
   cursor: pointer;
-  /* 
-    &:hover .burger__wrapper {
-       span,
-       &:before,
-       &:after {
-          background-color: orange; 
-       }
-    }
-  */
 }
 
 .burger:hover {
   transform: scale(1.2);
+}
+
+.burger:hover .burger__wrapper span,
+.burger:hover .burger__wrapper:before,
+.burger:hover .burger__wrapper:after {
+  background-color: #48a748;
 }
 
 .burger__wrapper {
@@ -720,8 +720,8 @@ body.test .hero__container {
   body.test .hero__container,
   .footer__container,
   .header__container {
-    padding-left: 2.5%;
-    padding-right: 2.5%;
+    padding-left: 2.9296875%;
+    padding-right: 2.9296875%;
   }
 
   .header__container {
@@ -753,15 +753,6 @@ body.test .hero__container {
 
   .burger {
     display: none;
-  }
-}
-
-@media (min-width: 1200px) {
-  body.test .hero__container,
-  .footer__container,
-  .header__container {
-    padding-left: 3.4722222222%;
-    padding-right: 3.4722222222%;
   }
 }
 
