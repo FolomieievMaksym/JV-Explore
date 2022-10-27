@@ -912,10 +912,8 @@ section:nth-child(even) {
   width: 300%;
   height: 300%;
   transform: translateY(-50%) rotate(-3deg);
-  background: #ddd;
   background: #485162;
   border-radius: 50%;
-  opacity: 0.2;
 }
 
 .products:after {

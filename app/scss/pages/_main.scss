@@ -244,10 +244,9 @@ section {
       width: 300%;
       height: 300%;
       transform: translateY(-50%) rotate(-3deg);
-      background: $lightGrey;
       background: $grey;
       border-radius: 50%;
-      opacity: 0.2;
+      // opacity: 0.2;
    }
    &:after {
       content: "";
