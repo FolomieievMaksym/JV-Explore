@@ -1001,7 +1001,7 @@ section:nth-child(even) {
 
   .about__container {
     padding-top: 14vw;
-    padding-bottom: 6vw;
+    padding-bottom: 8vw;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
   }
@@ -1032,8 +1032,8 @@ section:nth-child(even) {
   }
 
   .products__container {
-    padding-bottom: 14vw;
     padding-top: 14vw;
+    padding-bottom: 14vw;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
   }
@@ -1077,6 +1077,12 @@ section:nth-child(even) {
 
   .products__right {
     grid-column: 8/12;
+  }
+}
+
+@media (min-width: 1400px) {
+  .about__container {
+    padding-bottom: 7vw;
   }
 }
 
@@ -1178,11 +1184,6 @@ section:nth-child(even) {
     margin-bottom: 40px;
   }
 
-  .products__container {
-    padding-top: 48px;
-    padding-bottom: 64px;
-  }
-
   .products__right {
     margin-bottom: 40px;
   }
@@ -1195,8 +1196,18 @@ section:nth-child(even) {
   }
 
   .about__container {
-    padding-top: 12vw;
-    padding-bottom: 12vw;
+    padding-bottom: 16vw;
+  }
+}
+
+@media (max-width: 468px) {
+  .about__container {
+    padding-top: 20vw;
+  }
+
+  .products__container {
+    padding-top: 20vw;
+    padding-bottom: 20vw;
   }
 }
 
@@ -1207,7 +1218,7 @@ section:nth-child(even) {
   }
 
   .about__container {
-    padding-top: 10vw;
+    padding-top: 12vw;
     padding-bottom: 9vw;
   }
 
@@ -1215,6 +1226,22 @@ section:nth-child(even) {
     grid-template-columns: 1fr 1fr;
     -moz-column-gap: 20px;
     column-gap: 20px;
+  }
+
+  .products__container {
+    padding-top: 12vw;
+    padding-bottom: 18vw;
+  }
+}
+
+@media (min-width: 469px) and (max-width: 567px) {
+  .about__container {
+    padding-top: 16vw;
+  }
+
+  .products__container {
+    padding-top: 16vw;
+    padding-bottom: 16vw;
   }
 }
 

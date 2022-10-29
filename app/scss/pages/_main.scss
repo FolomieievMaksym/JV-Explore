@@ -221,19 +221,27 @@ section {
       z-index: 1;
       // margin-top: -2vw;
       // margin-top: -10vw;
+      @media (max-width: 468px) {
+         padding-top: 20vw;
+      }
+      @media (min-width: 469px) and (max-width: 567px) {
+         padding-top: 16vw;
+      }
       @media (max-width: 567px) {
-         padding-top: 12vw;
-         padding-bottom: 12vw;
+         padding-bottom: 16vw;
       }
       @media (min-width: 568px) and (max-width: 768px) {
-         padding-top: 10vw;
+         padding-top: 12vw;
          padding-bottom: 9vw;
       }
       @media (min-width: 769px) {
          padding-top: 14vw;
-         padding-bottom: 6vw;
+         padding-bottom: 8vw;
          display: grid;
          grid-template-columns: repeat(12, 1fr);
+      }
+      @media (min-width: 1400px) {
+         padding-bottom: 7vw;
       }
    }
 
@@ -335,13 +343,21 @@ section {
       z-index: 1;
       // padding-top: 2vw;
       // margin-top: -10vw;
-      @media (max-width: 768px) {
-         padding-top: 48px;
-         padding-bottom: 64px;
+      @media (max-width: 468px) {
+         padding-top: 20vw;
+         padding-bottom: 20vw;
+      }
+      @media (min-width: 469px) and (max-width: 567px) {
+         padding-top: 16vw;
+         padding-bottom: 16vw;
+      }
+      @media (min-width: 568px) and (max-width: 768px) {
+         padding-top: 12vw;
+         padding-bottom: 18vw;
       }
       @media (min-width: 769px) {
-         padding-bottom: 14vw;
          padding-top: 14vw;
+         padding-bottom: 14vw;
          display: grid;
          grid-template-columns: repeat(12, 1fr);
       }
