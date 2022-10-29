@@ -954,7 +954,7 @@ section:nth-child(even) {
 .contacts__container {
   position: relative;
   z-index: 1;
-  padding-bottom: 6vw;
+  padding-bottom: 3vw;
 }
 
 .contacts__title {
@@ -965,10 +965,6 @@ section:nth-child(even) {
   display: block;
   text-align: right;
   transition: all 0.3s ease;
-}
-
-.contacts__logo img {
-  max-width: 150px;
 }
 
 .contacts__logo:hover {
@@ -1169,7 +1165,10 @@ section:nth-child(even) {
 
   .contacts__logo {
     grid-column: 9/12;
-    text-align: right;
+  }
+
+  .contacts__logo img {
+    max-width: 150px;
   }
 }
 
@@ -1363,6 +1362,10 @@ section:nth-child(even) {
 
   .contacts__items .items__item {
     justify-content: flex-start;
+  }
+
+  .contacts__logo img {
+    max-width: 120px;
   }
 }
 

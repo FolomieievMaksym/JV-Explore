@@ -576,7 +576,7 @@ section {
       @extend %container;
       position: relative;
       z-index: 1;
-      padding-bottom: 6vw;
+      padding-bottom: 3vw;
       @media (max-width: 768px) {
          padding-top: 9vw;
       }
@@ -621,16 +621,20 @@ section {
    &__logo {
       display: block;
       text-align: right;
-      img {
-         max-width: 150px;
-      }
       transition: all 0.3s ease;
       &:hover {
          transform: scale(1.2);
       }
+      @media (max-width: 768px) {
+         img {
+            max-width: 120px;
+         }
+      }
       @media (min-width: 769px) {
+         img {
+            max-width: 150px;
+         }
          grid-column: 9/12;
-         text-align: right;
       }
    }
 }
