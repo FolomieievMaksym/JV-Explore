@@ -23,6 +23,7 @@
       width: 100%;
       height: 100%;
       background-color: $grey; // todo Изменить на нужный цвет подложки
+      background-color: $light;
       z-index: 0;
       transition: z-index 2s ease 0.8s;
    }
@@ -162,6 +163,7 @@
          padding-bottom: 5px;
          transition: all 0.3s ease;
          color: $lightGrey;
+         color: $grey;
          &:hover {
             color: $green;
             &:after {

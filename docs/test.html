@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="format-detection" content="telephone=no">
-	
+
 	<link rel="stylesheet" href="./css/test.min.css">
 	<!-- <link rel="shortcut icon" href="img/favicon.ico"> -->
 	<title>Test</title>
@@ -16,35 +16,37 @@
 <body class="test">
 	<div class="wrapper">
 		<header class="header">
-	<div class="header__container">
-		<div class="header__body">
-			<a class="header__logo" href="index.html">
-				<picture>
-					<source type='image/webp' srcset='img/JV-explore-logo-white.webp'>
-					<img src='img/JV-explore-logo-white.png' alt='JV-explore-logo'>
-				</picture>
-			</a>
-			<nav class="header__menu menu">
-				<ul class="menu__list">
-					<li><a href="#home">Home</a></li>
-					<li><a href="#about-us">About us</a></li>
-					<li><a href="#our-products">Our products</a></li>
-					<li><a href="#our-services">Our services</a></li>
-					<li><a href="#contacts">Contacts</a></li>
-				</ul>
-			</nav>
-			<div class="header__burger burger">
-				<div class="burger__wrapper">
-					<span></span>
+			<div class="header__container">
+				<div class="header__body">
+					<a class="header__logo" href="index.html">
+						<picture>
+							<!-- <source type='image/webp' srcset='img/JV-explore-logo-white.webp'>
+					<img src='img/JV-explore-logo-white.png' alt='JV-explore-logo'> -->
+							<source type='image/webp' srcset='img/JV-explore-logo-black.webp'>
+							<img src='img/JV-explore-logo-black.png' alt='JV-explore-logo'>
+						</picture>
+					</a>
+					<nav class="header__menu menu">
+						<ul class="menu__list">
+							<li><a href="#home">Home</a></li>
+							<li><a href="#about-us">About us</a></li>
+							<li><a href="#our-products">Our products</a></li>
+							<li><a href="#our-services">Our services</a></li>
+							<li><a href="#contacts">Contacts</a></li>
+						</ul>
+					</nav>
+					<div class="header__burger burger">
+						<div class="burger__wrapper">
+							<span></span>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-</header>
+		</header>
 		<main>
 			<section class="hero">
 				<div class="hero__container">
-					
+
 					<!-- ! Spoiler item-->
 					<div data-spoiler class="spoiler ">
 						<div class="spoiler__preview">
@@ -189,27 +191,27 @@
 			</section>
 		</main>
 		<footer class="footer">
-	<div class="footer__container">
-		<h2>Footer</h2>
+			<div class="footer__container">
+				<h2>Footer</h2>
+			</div>
+		</footer>
 	</div>
-</footer>
-	</div>
-	
-<script type="text/javascript">
-	function downloadJSAtOnload() {
-		let element = document.createElement("script");
-		element.src = "js/script.js";
-		element.type = 'module'
-		document.body.appendChild(element);
-	}
-	if (window.addEventListener) {
-		window.addEventListener("load", downloadJSAtOnload, false);
-	} else if (window.attachEvent) {
-		window.attachEvent("onload", downloadJSAtOnload);
-	} else {
-		window.onload = downloadJSAtOnload;
-	}
-</script>
+
+	<script type="text/javascript">
+		function downloadJSAtOnload() {
+			let element = document.createElement("script");
+			element.src = "js/script.js";
+			element.type = 'module'
+			document.body.appendChild(element);
+		}
+		if (window.addEventListener) {
+			window.addEventListener("load", downloadJSAtOnload, false);
+		} else if (window.attachEvent) {
+			window.attachEvent("onload", downloadJSAtOnload);
+		} else {
+			window.onload = downloadJSAtOnload;
+		}
+	</script>
 	<!-- todo указать нужное значение дял подключения\отключения свайпера -->
 </body>
 
