@@ -621,9 +621,13 @@ section {
    &__logo {
       display: block;
       text-align: right;
-      transition: all 0.3s ease;
+      img {
+         transition: all 0.3s ease;
+      }
       &:hover {
-         transform: scale(1.2);
+         img {
+            transform: scale(1.2);
+         }
       }
       @media (max-width: 768px) {
          img {

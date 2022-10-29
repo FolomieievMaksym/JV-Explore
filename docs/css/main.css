@@ -964,10 +964,13 @@ section:nth-child(even) {
 .contacts__logo {
   display: block;
   text-align: right;
+}
+
+.contacts__logo img {
   transition: all 0.3s ease;
 }
 
-.contacts__logo:hover {
+.contacts__logo:hover img {
   transform: scale(1.2);
 }
 
