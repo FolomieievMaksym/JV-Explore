@@ -164,8 +164,6 @@ body {
   background-color: #ddd;
   background-color: #fff;
   font-family: "Nunito";
-  font-size: 1.625rem;
-  line-height: 1.25;
 }
 
 .wrapper {
@@ -261,17 +259,16 @@ main {
 }
 
 .menu__list a {
+  display: block;
   white-space: nowrap;
   font-weight: 600;
-  font-size: 1.25rem;
-  line-height: 1.25;
   text-transform: uppercase;
   padding-top: 5px;
   padding-bottom: 5px;
   transition: all 0.3s ease;
-  color: #ddd;
   color: #485162;
-  display: block;
+  font-size: 1.125rem;
+  line-height: 1.25;
   position: relative;
 }
 
@@ -776,8 +773,6 @@ section:nth-child(even) {
 
 .items__text {
   align-self: center;
-  font-size: 1.625rem;
-  line-height: 1.25;
 }
 
 .parallax {
@@ -802,8 +797,8 @@ section:nth-child(even) {
 }
 
 .home__container {
-  padding-top: 2vw;
-  padding-bottom: 2vw;
+  padding-top: 6vw;
+  padding-bottom: 6vw;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
@@ -877,8 +872,8 @@ section:nth-child(even) {
 }
 
 .about__container {
-  padding-top: 10vw;
-  padding-bottom: 2vw;
+  padding-top: 14vw;
+  padding-bottom: 6vw;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   position: relative;
@@ -887,7 +882,6 @@ section:nth-child(even) {
 
 .about__title {
   text-align: right;
-  margin-top: -2vw;
   margin-bottom: 24px;
   grid-column: 1/12;
 }
@@ -942,8 +936,8 @@ section:nth-child(even) {
 }
 
 .products__container {
-  padding-bottom: 10vw;
-  padding-top: 10vw;
+  padding-bottom: 14vw;
+  padding-top: 14vw;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   position: relative;
@@ -951,7 +945,6 @@ section:nth-child(even) {
 }
 
 .products__title {
-  margin-top: -2vw;
   grid-column: 1/12;
   margin-bottom: 24px;
 }
@@ -1011,6 +1004,11 @@ section:nth-child(even) {
     padding-right: 2.9296875%;
   }
 
+  body {
+    font-size: 1.25rem;
+    line-height: 1.25;
+  }
+
   .header__container {
     min-height: 80px;
   }
@@ -1020,7 +1018,7 @@ section:nth-child(even) {
   }
 
   .header__logo {
-    flex: 0 1 200px;
+    flex: 0 1 150px;
   }
 
   .menu {
@@ -1044,6 +1042,11 @@ section:nth-child(even) {
 }
 
 @media (max-width: 768px) {
+  body {
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+
   .header__container {
     min-height: 60px;
   }
@@ -1053,7 +1056,7 @@ section:nth-child(even) {
   }
 
   .header__logo {
-    flex: 0 1 150px;
+    flex: 0 1 120px;
   }
 
   .header__logo img {

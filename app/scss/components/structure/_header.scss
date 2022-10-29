@@ -65,13 +65,13 @@
    }
    &__logo {
       @media (max-width: 768px) {
-         flex: 0 1 150px;
+         flex: 0 1 120px;
          img {
             vertical-align: middle;
          }
       }
       @media (min-width: 769px) {
-         flex: 0 1 200px;
+         flex: 0 1 150px;
       }
       z-index: 2;
       @include fl(30);
@@ -155,22 +155,22 @@
       }
 
       a {
+         display: block;
          white-space: nowrap;
          font-weight: 600;
-         @include fl(20);
          text-transform: uppercase;
          padding-top: 5px;
          padding-bottom: 5px;
          transition: all 0.3s ease;
-         color: $lightGrey;
          color: $grey;
+         @include fl(18);
+
          &:hover {
             color: $green;
             &:after {
                width: 100%;
             }
          }
-         display: block;
          position: relative;
          &:after {
             content: "";

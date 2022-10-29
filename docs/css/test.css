@@ -162,8 +162,6 @@ body {
   background-color: #ddd;
   background-color: #fff;
   font-family: "Nunito";
-  font-size: 1.625rem;
-  line-height: 1.25;
 }
 
 .wrapper {
@@ -259,17 +257,16 @@ main {
 }
 
 .menu__list a {
+  display: block;
   white-space: nowrap;
   font-weight: 600;
-  font-size: 1.25rem;
-  line-height: 1.25;
   text-transform: uppercase;
   padding-top: 5px;
   padding-bottom: 5px;
   transition: all 0.3s ease;
-  color: #ddd;
   color: #485162;
-  display: block;
+  font-size: 1.125rem;
+  line-height: 1.25;
   position: relative;
 }
 
@@ -726,6 +723,11 @@ body.test .hero__container {
     padding-right: 2.9296875%;
   }
 
+  body {
+    font-size: 1.25rem;
+    line-height: 1.25;
+  }
+
   .header__container {
     min-height: 80px;
   }
@@ -735,7 +737,7 @@ body.test .hero__container {
   }
 
   .header__logo {
-    flex: 0 1 200px;
+    flex: 0 1 150px;
   }
 
   .menu {
@@ -759,6 +761,11 @@ body.test .hero__container {
 }
 
 @media (max-width: 768px) {
+  body {
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+
   .header__container {
     min-height: 60px;
   }
@@ -768,7 +775,7 @@ body.test .hero__container {
   }
 
   .header__logo {
-    flex: 0 1 150px;
+    flex: 0 1 120px;
   }
 
   .header__logo img {

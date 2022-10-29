@@ -6,7 +6,12 @@ body {
    background-color: $lightGrey;
    background-color: $light;
    font-family: $ff1;
-   @include fl(26);
+   @media (max-width: 768px) {
+      @include fl(16);
+   }
+   @media (min-width: 769px) {
+      @include fl(20);
+   }
 }
 .wrapper {
    display: flex;
