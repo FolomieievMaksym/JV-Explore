@@ -728,10 +728,6 @@ body.test .hero__container {
     line-height: 1.25;
   }
 
-  .header__container {
-    min-height: 80px;
-  }
-
   .header__body {
     align-items: center;
   }
@@ -754,18 +750,19 @@ body.test .hero__container {
     -moz-column-gap: 2vw;
     column-gap: 2vw;
   }
+}
+
+@media (min-width: 850px) {
+  .header__container {
+    min-height: 80px;
+  }
 
   .burger {
     display: none;
   }
 }
 
-@media (max-width: 768px) {
-  body {
-    font-size: 1rem;
-    line-height: 1.25;
-  }
-
+@media (max-width: 849px) {
   .header__container {
     min-height: 60px;
   }
@@ -836,5 +833,12 @@ body.test .hero__container {
     margin-bottom: 50px;
     opacity: 0;
     transition: opacity 0.8s ease 0.3s;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 1rem;
+    line-height: 1.25;
   }
 }
