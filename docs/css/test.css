@@ -740,6 +740,12 @@ body.test .hero__container {
     position: relative;
     flex: 1 1 auto;
   }
+}
+
+@media (min-width: 850px) {
+  .header__container {
+    min-height: 80px;
+  }
 
   .menu__list {
     flex-wrap: wrap;
@@ -749,12 +755,6 @@ body.test .hero__container {
     row-gap: 5px;
     -moz-column-gap: 2vw;
     column-gap: 2vw;
-  }
-}
-
-@media (min-width: 850px) {
-  .header__container {
-    min-height: 80px;
   }
 
   .burger {
@@ -785,12 +785,13 @@ body.test .hero__container {
     left: 100%;
     width: 100vw;
     height: 100vh;
+    transition: left 0.6s ease 0s;
     overflow-y: auto;
   }
 
   .menu.active {
     left: 0;
-    transition: left 0.8s ease 0s, opacity 0.3s ease 0.8s;
+    transition: left 0.8s ease 0s;
   }
 
   .menu.active:after {
@@ -814,7 +815,7 @@ body.test .hero__container {
     height: 100%;
     background: #000;
     opacity: 0;
-    transition: all 0.3s ease 0s;
+    transition: all 0s ease 0s;
   }
 
   .menu__list {
@@ -831,7 +832,7 @@ body.test .hero__container {
     z-index: 2;
     margin-bottom: 50px;
     opacity: 0;
-    transition: opacity 0.8s ease 0.3s;
+    transition: opacity 0.6s ease 0s;
   }
 }
 

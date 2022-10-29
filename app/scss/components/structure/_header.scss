@@ -93,11 +93,11 @@
       left: 100%;
       width: 100vw;
       height: 100vh;
-      // transition: left 0.4s ease 0.1s, opacity 0.1s ease 0s;
+      transition: left 0.6s ease 0s;
       overflow-y: auto;
       &.active {
          left: 0;
-         transition: left 0.8s ease 0s, opacity 0.3s ease 0.8s;
+         transition: left 0.8s ease 0s;
          &:after {
             opacity: 0.8;
             transition: all 0.3s ease 0.7s;
@@ -118,13 +118,13 @@
          height: 100%;
          background: #000;
          opacity: 0;
-         transition: all 0.3s ease 0s;
+         transition: all 0s ease 0s;
       }
    }
    @media (min-width: 769px) {
       position: relative;
-      flex: 1 1 auto; //Растягиваем на всю возможную ширину
-      // max-width: 680px; // Задаем максимальную ширину (брать ширину меню из макета)
+      flex: 1 1 auto; // Растягиваем на всю возможную ширину
+      // todo max-width: 680px; // Задаем максимальную ширину (брать ширину меню из макета)
    }
    &__list {
       display: flex;
@@ -142,13 +142,11 @@
          z-index: 2;
          margin-bottom: 50px; // Запас для скролла на айфонах в горизонтальном положении
          opacity: 0;
-         transition: opacity 0.8s ease 0.3s;
-         // max-width: max-content;
-         // margin-left: auto;
+         transition: opacity 0.6s ease 0s;
       }
-      @media (min-width: 769px) {
+      @media (min-width: 850px) {
          flex-wrap: wrap;
-         justify-content: flex-end; // Раздвигаем элементы меню между собой для резинового увеличения отступа
+         justify-content: flex-end; // todo Раздвигаем элементы меню между собой для резинового увеличения отступа
          column-gap: 15px; // минимальный отступ между элементами меню
          row-gap: 5px;
          column-gap: 2vw;
