@@ -45,7 +45,12 @@ section {
 .items {
    display: grid;
    grid-template-columns: 1fr;
-   row-gap: 40px;
+   @media (max-width: 768px) {
+      row-gap: 28px;
+   }
+   @media (min-width: 769px) {
+      row-gap: 40px;
+   }
    // .about-items__item
 
    &__item {
@@ -99,7 +104,7 @@ section {
          padding-bottom: 12vw;
       }
       @media (min-width: 568px) and (max-width: 768px) {
-         padding-top: 6vw;
+         padding-top: 4vw;
          padding-bottom: 6vw;
       }
       @media (min-width: 769px) {
@@ -128,7 +133,8 @@ section {
 
    &__left {
       @media (max-width: 768px) {
-         margin-bottom: 40px;
+         // margin-bottom: 40px;
+         margin-bottom: 60px;
       }
       @media (min-width: 769px) {
          grid-column: 1/6;
@@ -139,6 +145,10 @@ section {
 
    &__left-wrapper {
       position: relative;
+      @media (max-width: 768px) {
+         max-width: 85%;
+         margin: 0 auto;
+      }
    }
 
    &__parallax {
@@ -148,12 +158,14 @@ section {
       &_1 {
          top: 100%;
          left: 0;
-         transform: translate(-50%, -50%);
+         // transform: translate(-50%, -50%);
+         transform: translate(-75%, -25%);
       }
       &_2 {
          top: 0;
          left: 100%;
-         transform: translate(-50%, -50%);
+         // transform: translate(-50%, -50%);
+         transform: translate(-25%, -75%);
       }
    }
 
@@ -219,8 +231,6 @@ section {
       @extend %container;
       position: relative;
       z-index: 1;
-      // margin-top: -2vw;
-      // margin-top: -10vw;
       @media (max-width: 468px) {
          padding-top: 20vw;
       }
@@ -228,7 +238,7 @@ section {
          padding-top: 16vw;
       }
       @media (max-width: 567px) {
-         padding-bottom: 16vw;
+         padding-bottom: 12vw;
       }
       @media (min-width: 568px) and (max-width: 768px) {
          padding-top: 12vw;
@@ -422,6 +432,9 @@ section {
       }
    }
 }
+// ! Services === Services === Services === Services === Services
+// ! Services === Services === Services === Services === Services
+// ! Services === Services === Services === Services === Services
 .services {
    position: relative;
    z-index: 1;
@@ -437,5 +450,187 @@ section {
       border-left-width: 100vw;
       border-bottom: 10vw solid $grey;
       border-bottom: 10vw solid $light;
+   }
+   // .services__container
+
+   &__container {
+      @extend %container;
+      position: relative;
+      z-index: 1;
+      @media (max-width: 768px) {
+         padding-bottom: 9vw;
+         padding-top: 12vw;
+      }
+      @media (min-width: 769px) {
+         padding-top: 8vw;
+         padding-bottom: 6vw;
+         display: grid;
+         grid-template-columns: repeat(12, 1fr);
+      }
+   }
+
+   // .services__title
+
+   &__title {
+      text-align: right;
+      margin-bottom: 24px;
+      @media (min-width: 769px) {
+         grid-column: 1/12;
+      }
+   }
+
+   &__top,
+   &__bottom {
+      @media (min-width: 769px) {
+         grid-column: span 12;
+         display: grid;
+         grid-template-columns: repeat(12, 1fr);
+         align-items: flex-end;
+         align-items: flex-start;
+      }
+   }
+
+   // .services__top
+
+   &__top {
+      @media (max-width: 768px) {
+         margin-bottom: 44px;
+      }
+      @media (min-width: 769px) {
+         margin-bottom: 60px;
+      }
+      @media (min-width: 1000px) {
+         margin-bottom: percent(100, 1920);
+      }
+      .services__image {
+         @media (min-width: 769px) {
+            grid-column: 1/5;
+         }
+      }
+      .services__text {
+         @media (min-width: 769px) {
+            grid-column: 6/13;
+         }
+         @media (min-width: 1000px) {
+            grid-column: 6/12;
+         }
+         @media (min-width: 1400px) {
+            grid-column: 7/12;
+         }
+      }
+   }
+   // .services__bottom
+
+   &__bottom {
+      .services__image {
+         @media (min-width: 769px) {
+            grid-column: 9/13;
+            order: 2;
+         }
+      }
+      .services__text {
+         @media (min-width: 769px) {
+            grid-column: 1/8;
+            order: 1;
+         }
+         @media (min-width: 1000px) {
+            grid-column: 1/7;
+         }
+         @media (min-width: 1400px) {
+            grid-column: 2/7;
+         }
+      }
+   }
+
+   // .services__image
+
+   &__image {
+      position: relative;
+      padding-bottom: percent(300, 600);
+      @media (max-width: 768px) {
+         margin-bottom: 24px;
+      }
+      img {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: center;
+      }
+   }
+
+   // .services__text
+
+   &__text {
+   }
+}
+// ! Contacts === Contacts === Contacts === Contacts === Contacts
+// ! Contacts === Contacts === Contacts === Contacts === Contacts
+// ! Contacts === Contacts === Contacts === Contacts === Contacts
+.contacts {
+   // .contacts__container
+
+   &__container {
+      @extend %container;
+      position: relative;
+      z-index: 1;
+      padding-bottom: 6vw;
+      @media (max-width: 768px) {
+         padding-top: 9vw;
+      }
+      @media (min-width: 769px) {
+         padding-top: 6vw;
+         display: grid;
+         grid-template-columns: repeat(12, 1fr);
+      }
+   }
+
+   // .contacts__title
+
+   &__title {
+      margin-bottom: 24px;
+      @media (min-width: 769px) {
+         grid-column: 1/12;
+      }
+   }
+
+   // .contacts__content
+   &__content {
+      @media (min-width: 769px) {
+         align-items: flex-end;
+      }
+   }
+   // .contacts__items
+
+   &__items {
+      @media (max-width: 768px) {
+         margin-bottom: 40px;
+         .items__item {
+            justify-content: flex-start;
+         }
+      }
+      @media (min-width: 769px) {
+         grid-column: 1/7;
+      }
+   }
+
+   // .contacts__logo
+
+   &__logo {
+      display: block;
+      text-align: right;
+      img {
+         max-width: 150px;
+      }
+      transition: all 0.3s ease;
+      &:hover {
+         transform: scale(1.2);
+      }
+      @media (min-width: 769px) {
+         grid-column: 9/12;
+         text-align: right;
+      }
    }
 }
