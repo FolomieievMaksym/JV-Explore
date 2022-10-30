@@ -760,7 +760,8 @@ section:nth-child(even) {
 
 .items__title {
   font-weight: 600;
-  font-size: 1.15em;
+  font-size: 1.1em;
+  margin-bottom: 8px;
 }
 
 .items__text {
@@ -822,10 +823,6 @@ section:nth-child(even) {
   object-position: center;
 }
 
-.home__subtitle {
-  margin-bottom: 20px;
-}
-
 .about {
   position: relative;
   z-index: 1;
@@ -853,8 +850,8 @@ section:nth-child(even) {
   text-align: right;
 }
 
-.about__subtitle {
-  margin-bottom: 20px;
+.about__text_bold {
+  font-weight: 600;
 }
 
 .products {
@@ -936,7 +933,6 @@ section:nth-child(even) {
 
 .services__title {
   text-align: right;
-  margin-bottom: 24px;
 }
 
 .services__image {
@@ -960,10 +956,6 @@ section:nth-child(even) {
   position: relative;
   z-index: 1;
   padding-bottom: 3vw;
-}
-
-.contacts__title {
-  margin-bottom: 24px;
 }
 
 .contacts__logo {
@@ -1011,6 +1003,7 @@ section:nth-child(even) {
   .title {
     font-size: 2.5rem;
     line-height: 1.25;
+    margin-bottom: 48px;
   }
 
   .content {
@@ -1024,14 +1017,11 @@ section:nth-child(even) {
   .subtitle {
     font-size: 2rem;
     line-height: 1.25;
+    margin-bottom: 24px;
   }
 
   .items {
     row-gap: 50px;
-  }
-
-  .items__title {
-    margin-bottom: 16px;
   }
 
   .home__container {
@@ -1042,7 +1032,6 @@ section:nth-child(even) {
   }
 
   .home__title {
-    margin-bottom: 48px;
     grid-column: 1/12;
   }
 
@@ -1066,7 +1055,6 @@ section:nth-child(even) {
   }
 
   .about__title {
-    margin-bottom: 48px;
     grid-column: 1/12;
   }
 
@@ -1103,7 +1091,6 @@ section:nth-child(even) {
   }
 
   .products__title {
-    margin-bottom: 48px;
     grid-column: 1/12;
   }
 
@@ -1338,23 +1325,17 @@ section:nth-child(even) {
   .title {
     font-size: 1.875rem;
     line-height: 1.25;
+    margin-bottom: 28px;
   }
 
   .subtitle {
     font-size: 1.625rem;
     line-height: 1.25;
+    margin-bottom: 16px;
   }
 
   .items {
     row-gap: 32px;
-  }
-
-  .items__title {
-    margin-bottom: 12px;
-  }
-
-  .home__title {
-    margin-bottom: 28px;
   }
 
   .home__left {
@@ -1370,20 +1351,12 @@ section:nth-child(even) {
     margin-bottom: 12px;
   }
 
-  .about__title {
-    margin-bottom: 28px;
-  }
-
   .about__left {
     margin-bottom: 40px;
   }
 
   .about__text:not(:last-child) {
     margin-bottom: 12px;
-  }
-
-  .products__title {
-    margin-bottom: 28px;
   }
 
   .products__items {

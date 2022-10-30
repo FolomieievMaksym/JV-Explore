@@ -18,9 +18,11 @@ section {
    font-weight: 700;
    @media (max-width: 768px) {
       @include fl(30);
+      margin-bottom: 28px;
    }
    @media (min-width: 769px) {
       @include fl(40);
+      margin-bottom: 48px;
    }
 }
 .content {
@@ -36,9 +38,11 @@ section {
    font-weight: 600;
    @media (max-width: 768px) {
       @include fl(26);
+      margin-bottom: 16px;
    }
    @media (min-width: 769px) {
       @include fl(32);
+      margin-bottom: 24px;
    }
 }
 
@@ -80,13 +84,8 @@ section {
    // items__title
    &__title {
       font-weight: 600;
-      font-size: 1.15em;
-      @media (max-width: 768px) {
-         margin-bottom: 12px;
-      }
-      @media (min-width: 769px) {
-         margin-bottom: 16px;
-      }
+      font-size: 1.1em;
+      margin-bottom: 8px;
    }
    // items__text
 
@@ -138,11 +137,7 @@ section {
    // .home__title
 
    &__title {
-      @media (max-width: 768px) {
-         margin-bottom: 28px;
-      }
       @media (min-width: 769px) {
-         margin-bottom: 48px;
          grid-column: 1/12;
       }
    }
@@ -223,7 +218,6 @@ section {
    // .home__subtitle
 
    &__subtitle {
-      margin-bottom: 20px;
    }
 
    // .home__text
@@ -290,11 +284,7 @@ section {
 
    &__title {
       text-align: right;
-      @media (max-width: 768px) {
-         margin-bottom: 28px;
-      }
       @media (min-width: 769px) {
-         margin-bottom: 48px;
          grid-column: 1/12;
       }
    }
@@ -334,7 +324,6 @@ section {
    // .about__subtitle
 
    &__subtitle {
-      margin-bottom: 20px;
    }
 
    // .about__text
@@ -347,6 +336,9 @@ section {
          @media (min-width: 769px) {
             margin-bottom: 16px;
          }
+      }
+      &_bold {
+         font-weight: 600;
       }
    }
 }
@@ -418,12 +410,7 @@ section {
    // .products__title
 
    &__title {
-      // margin-top: -2vw;
-      @media (max-width: 768px) {
-         margin-bottom: 28px;
-      }
       @media (min-width: 769px) {
-         margin-bottom: 48px;
          grid-column: 1/12;
       }
    }
@@ -536,7 +523,6 @@ section {
 
    &__title {
       text-align: right;
-      margin-bottom: 24px;
       @media (min-width: 769px) {
          grid-column: 1/12;
       }
@@ -653,7 +639,6 @@ section {
    // .contacts__title
 
    &__title {
-      margin-bottom: 24px;
       @media (min-width: 769px) {
          grid-column: 1/12;
       }
