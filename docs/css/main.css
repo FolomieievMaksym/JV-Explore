@@ -881,12 +881,23 @@ section:nth-child(even) {
 }
 
 .products__info {
+  grid-row: 3/4;
+  grid-column: 1/7;
   font-size: 1.1em;
 }
 
 .products__info a {
   color: #48a748;
   font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.products__info a:hover {
+  opacity: 0.9;
+}
+
+.products__info a:active {
+  opacity: 1;
 }
 
 .products__image {

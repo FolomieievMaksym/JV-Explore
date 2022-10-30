@@ -440,10 +440,19 @@ section {
    }
    // .products__info
    &__info {
+      grid-row: 3/4;
+      grid-column: 1/7;
       font-size: 1.1em;
       a {
          color: $green;
          font-weight: 600;
+         transition: all 0.3s ease;
+         &:hover {
+            opacity: 0.9;
+         }
+         &:active {
+            opacity: 1;
+         }
       }
    }
 
