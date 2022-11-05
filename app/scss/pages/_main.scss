@@ -860,8 +860,9 @@ section {
    // .contacts__logo
 
    &__logo {
-      display: block;
+      display: inline-block;
       text-align: right;
+      margin-left: auto;
       img {
          transition: all 0.3s ease;
       }

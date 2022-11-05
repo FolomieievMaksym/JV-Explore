@@ -1120,8 +1120,9 @@ section:nth-child(even) {
 }
 
 .contacts__logo {
-  display: block;
+  display: inline-block;
   text-align: right;
+  margin-left: auto;
 }
 
 .contacts__logo img {
