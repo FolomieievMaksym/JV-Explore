@@ -1,6 +1,7 @@
 let viewportTop = document.documentElement.clientHeight;
-window.addEventListener("scroll", parallax);
-
+if (window.innerWidth > 768) {
+   window.addEventListener("scroll", parallax);
+}
 let parallaxParent = document.querySelectorAll("[data-parallax-parent]");
 let parallaxElement = document.querySelectorAll("[data-parallax-element]");
 let smallerElement;
