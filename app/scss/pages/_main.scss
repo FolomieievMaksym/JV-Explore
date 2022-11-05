@@ -177,11 +177,6 @@ section {
       }
    }
 
-   &__title {
-      color: $dark;
-      white-space: nowrap;
-   }
-
    // .home__content
 
    &__content {
@@ -784,8 +779,12 @@ section {
    // .products__content
 
    &__content {
+      @media (max-width: 768px) {
+         margin-bottom: 40px;
+      }
       @media (min-width: 769px) {
          row-gap: 60px;
+         margin-bottom: 80px;
       }
    }
 
@@ -825,8 +824,44 @@ section {
    }
 
    &__image {
+      position: relative;
       img {
+         position: absolute;
+         top: 0;
+         left: 0;
          width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: center;
+      }
+      &:after {
+         content: "";
+         position: absolute;
+         top: -20px;
+         left: -20px;
+         right: -20px;
+         bottom: 0;
+         box-shadow: inset 0 -20px 20px $light, inset 0 -20px 20px $light;
+      }
+      &_1 {
+         padding-bottom: percent(187, 308);
+         @media (max-width: 768px) {
+            margin-left: percent(-20, 320);
+         }
+         @media (min-width: 769px) {
+            margin-left: percent(-60, 760);
+         }
+      }
+
+      &_2 {
+         padding-bottom: percent(162, 308);
+
+         @media (max-width: 768px) {
+            margin-right: percent(-20, 320);
+         }
+         @media (min-width: 769px) {
+            margin-right: percent(-60, 760);
+         }
       }
    }
 
@@ -874,9 +909,14 @@ section {
    // .products__info
    &__info {
       color: $dark;
-      grid-row: 3/4;
-      grid-column: 1/7;
+      grid-column: span 12;
       font-size: 1.1em;
+      @media (max-width: 768px) {
+         max-width: 560px;
+      }
+      @media (min-width: 769px) {
+         max-width: 700px;
+      }
       a {
          color: $green;
          font-weight: 600;
@@ -983,11 +1023,15 @@ section {
       @media (max-width: 768px) {
          grid-row: 1/2;
          order: 1;
+         @include fl(40);
+         // @include fl(52);
       }
       @media (min-width: 769px) {
          grid-column: 9/12;
          margin-bottom: 0;
          align-self: center;
+         @include fl(58);
+         // @include fl(70);
       }
    }
    // .services__content
@@ -1036,10 +1080,13 @@ section {
       font-weight: 600;
       @media (max-width: 768px) {
          @include fl(22);
+         @include fl(24);
          margin-bottom: 28px;
       }
       @media (min-width: 769px) {
          @include fl(28);
+         @include fl(30);
+
          margin-bottom: 48px;
       }
       &:after {

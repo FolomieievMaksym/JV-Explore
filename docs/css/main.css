@@ -810,11 +810,6 @@ section:nth-child(even) {
   background-color: #fff;
 }
 
-.home__title {
-  color: #000;
-  white-space: nowrap;
-}
-
 .home__left-wrapper {
   position: relative;
 }
@@ -1056,8 +1051,38 @@ section:nth-child(even) {
   color: #000;
 }
 
+.products__image {
+  position: relative;
+}
+
 .products__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
+.products__image:after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: 0;
+  box-shadow: inset 0 -20px 20px #fff, inset 0 -20px 20px #fff;
+}
+
+.products__image_1 {
+  padding-bottom: 60.7142857143%;
+}
+
+.products__image_2 {
+  padding-bottom: 52.5974025974%;
 }
 
 .products__text {
@@ -1086,8 +1111,7 @@ section:nth-child(even) {
 
 .products__info {
   color: #000;
-  grid-row: 3/4;
-  grid-column: 1/7;
+  grid-column: span 12;
   font-size: 1.1em;
 }
 
@@ -1378,6 +1402,7 @@ section:nth-child(even) {
 
   .products__content {
     row-gap: 60px;
+    margin-bottom: 80px;
   }
 
   .products__item {
@@ -1405,6 +1430,14 @@ section:nth-child(even) {
     order: 1;
   }
 
+  .products__image_1 {
+    margin-left: -7.8947368421%;
+  }
+
+  .products__image_2 {
+    margin-right: -7.8947368421%;
+  }
+
   .products__text {
     grid-column: 7/13;
     max-width: 500px;
@@ -1420,6 +1453,10 @@ section:nth-child(even) {
     font-size: 3.625rem;
     line-height: 1.25;
     margin-bottom: 60px;
+  }
+
+  .products__info {
+    max-width: 700px;
   }
 
   .services__container {
@@ -1438,6 +1475,8 @@ section:nth-child(even) {
     grid-column: 9/12;
     margin-bottom: 0;
     align-self: center;
+    font-size: 3.625rem;
+    line-height: 1.25;
   }
 
   .services__content {
@@ -1451,6 +1490,8 @@ section:nth-child(even) {
 
   .services-item__title {
     font-size: 1.75rem;
+    line-height: 1.25;
+    font-size: 1.875rem;
     line-height: 1.25;
     margin-bottom: 48px;
   }
@@ -1678,6 +1719,18 @@ section:nth-child(even) {
     line-height: 1.25;
   }
 
+  .products__content {
+    margin-bottom: 40px;
+  }
+
+  .products__image_1 {
+    margin-left: -6.25%;
+  }
+
+  .products__image_2 {
+    margin-right: -6.25%;
+  }
+
   .products__item-title:after {
     bottom: -15px;
   }
@@ -1686,6 +1739,10 @@ section:nth-child(even) {
     margin-bottom: 30px;
     font-size: 2.5rem;
     line-height: 1.25;
+  }
+
+  .products__info {
+    max-width: 560px;
   }
 
   .services__container {
@@ -1703,6 +1760,8 @@ section:nth-child(even) {
   .services__title {
     grid-row: 1/2;
     order: 1;
+    font-size: 2.5rem;
+    line-height: 1.25;
   }
 
   .services-item__image img {
@@ -1711,6 +1770,8 @@ section:nth-child(even) {
 
   .services-item__title {
     font-size: 1.375rem;
+    line-height: 1.25;
+    font-size: 1.5rem;
     line-height: 1.25;
     margin-bottom: 28px;
   }
