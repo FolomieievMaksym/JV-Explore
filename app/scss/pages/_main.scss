@@ -25,6 +25,7 @@ section {
    }
 }
 .content {
+   border: 10px solid red;
    @media (min-width: 769px) {
       grid-column: span 12;
       display: grid;

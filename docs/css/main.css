@@ -733,6 +733,10 @@ section:nth-child(even) {
   font-weight: 700;
 }
 
+.content {
+  border: 10px solid red;
+}
+
 .subtitle {
   font-weight: 600;
 }
