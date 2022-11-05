@@ -349,6 +349,9 @@ section {
       .circle {
          width: 60%;
          height: 60%;
+         // If need to change size of dots
+         // width: 30%;
+         // height: 30%;
          background-color: $green;
          border-radius: 50%;
          position: absolute;
@@ -434,6 +437,18 @@ section {
          font-size: 1.8em;
          font-weight: 700;
          color: $green;
+         &:last-child {
+            position: relative;
+            &:after {
+               content: "";
+               display: inline-block;
+               margin-left: 3px;
+               width: 6px;
+               height: 6px;
+               border-radius: 50%;
+               background-color: $green;
+            }
+         }
       }
    }
 }
@@ -727,45 +742,10 @@ section {
 //    }
 // }
 .products {
-   // overflow-y: hidden;
-   // background-color: $lightGrey !important;
-   overflow: hidden;
-   position: relative;
-   z-index: 3;
-   @media (min-width: 769px) {
-      &:before {
-         content: "";
-         position: absolute;
-         top: 50%;
-         left: 50%;
-         width: 300%;
-         height: 300%;
-         transform: translateY(-50%) rotate(-3deg);
-         background: $grey;
-         background-color: $light;
-         border-radius: 50%;
-      }
-   }
-   &:after {
-      content: "";
-      position: absolute;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      width: 0;
-      height: 0;
-      border: 0 solid transparent;
-      border-top-width: 0px;
-      border-bottom-width: 10vw;
-      border-right: 100vw solid $grey;
-      border-right: 100vw solid $light;
-   }
+   background-color: $light !important;
    // .products__container
-
    &__container {
       @extend %container;
-      position: relative;
-      z-index: 1;
       // padding-top: 2vw;
       // margin-top: -10vw;
       @media (max-width: 468px) {
@@ -791,8 +771,13 @@ section {
    // .products__title
 
    &__title {
+      color: $dark;
+      @media (max-width: 768px) {
+         @include fl(52);
+      }
       @media (min-width: 769px) {
          grid-column: 1/12;
+         @include fl(70);
       }
    }
 
@@ -808,6 +793,7 @@ section {
       @media (min-width: 769px) {
          grid-column: span 12;
          display: grid;
+         align-items: center;
          grid-template-columns: repeat(12, 1fr);
       }
       &:nth-child(1) {
@@ -819,7 +805,6 @@ section {
          .products__text {
             @media (min-width: 769px) {
                grid-column: 8/13;
-               color: $dark;
             }
          }
       }
@@ -841,23 +826,54 @@ section {
 
    &__image {
       img {
-         max-width: 100%;
+         width: 100%;
       }
    }
 
    &__text {
+      color: $dark;
       @media (min-width: 769px) {
          grid-column: 7/13;
+         max-width: 500px;
+         margin-left: auto;
+         margin-right: auto;
       }
    }
 
+   &__item-title {
+      text-align: center;
+      position: relative;
+      &:after {
+         content: "";
+         position: absolute;
+         left: -20px;
+         right: -20px;
+         height: 2px;
+         background: $green;
+         @media (max-width: 768px) {
+            bottom: -15px;
+         }
+         @media (min-width: 769px) {
+            bottom: -30px;
+         }
+      }
+      @media (max-width: 768px) {
+         margin-bottom: 30px;
+         @include fl(40);
+      }
+      @media (min-width: 769px) {
+         @include fl(58);
+         margin-bottom: 60px;
+      }
+   }
    &__item-text {
+      text-align: justify;
+      text-align-last: center;
    }
 
-   &__item-title {
-   }
    // .products__info
    &__info {
+      color: $dark;
       grid-row: 3/4;
       grid-column: 1/7;
       font-size: 1.1em;
@@ -878,21 +894,21 @@ section {
 // ! Services === Services === Services === Services === Services
 // ! Services === Services === Services === Services === Services
 .services {
-   position: relative;
-   z-index: 3;
-   &:after {
-      content: "";
-      position: absolute;
-      bottom: 100%;
-      left: 0;
-      width: 0;
-      height: 0;
-      border: 0 solid transparent;
-      border-right-width: 0px;
-      border-left-width: 100vw;
-      border-bottom: 10vw solid $grey;
-      border-bottom: 10vw solid $light;
-   }
+   // position: relative;
+   // z-index: 3;
+   // &:after {
+   //    content: "";
+   //    position: absolute;
+   //    bottom: 100%;
+   //    left: 0;
+   //    width: 0;
+   //    height: 0;
+   //    border: 0 solid transparent;
+   //    border-right-width: 0px;
+   //    border-left-width: 100vw;
+   //    border-bottom: 10vw solid $grey;
+   //    border-bottom: 10vw solid $light;
+   // }
    // .services__container
 
    &__container {
