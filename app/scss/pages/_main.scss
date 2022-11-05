@@ -139,19 +139,20 @@ section {
          content: "";
          position: absolute;
          top: 50%;
-         right: 56%;
+         right: 63%;
          bottom: -10vw;
          width: 300%;
          height: 300%;
          transform: translate(2%, -50%) rotate(-3deg);
-         background: linear-gradient(77deg, $green 80%, $grey 92%);
+         // background: linear-gradient(77deg, $green 80%, $grey 92%);
+         background-color: $light;
          border-radius: 50%;
          z-index: 2;
       }
    }
    @media (min-width: 1400px) {
       &:before {
-         right: 62%;
+         right: 70%;
       }
    }
    // .home__container
@@ -198,6 +199,7 @@ section {
       }
       @media (min-width: 1400px) {
          grid-column: 5/13;
+         padding-left: 50px;
       }
    }
 
@@ -339,8 +341,6 @@ section {
          color: $dark;
          position: relative;
          z-index: 3;
-         color: $light;
-         color: $light;
       }
       @media (min-width: 1100px) {
          // grid-column: 8/12;
@@ -370,7 +370,7 @@ section {
       span {
          font-size: 1.6em;
          font-weight: 700;
-         // color: $green;
+         color: $green;
       }
    }
 }
@@ -380,21 +380,21 @@ section {
 .about {
    position: relative;
    z-index: 3;
-   &__fix {
-      @media (min-width: 769px) {
-         position: relative;
-         &:after {
-            content: "";
-            position: absolute;
-            bottom: 100%;
-            left: -10%;
-            width: 120%;
-            height: 5vw;
-            background: $light;
-            transform: rotate(354.3deg);
-         }
-      }
-   }
+   // &__fix {
+   //    @media (min-width: 769px) {
+   //       position: relative;
+   //       &:after {
+   //          content: "";
+   //          position: absolute;
+   //          bottom: 100%;
+   //          left: -10%;
+   //          width: 120%;
+   //          height: 5vw;
+   //          background: $light;
+   //          transform: rotate(354.3deg);
+   //       }
+   //    }
+   // }
    // z-index: 4;
    // &:after {
    //    content: "";
