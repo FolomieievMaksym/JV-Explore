@@ -37,9 +37,7 @@ function parallax(e) {
          console.log("Высота блока = " + smallerElementHeight);
          heightDifference = parentHeight - smallerElementHeight;
          console.log("Разница высот = " + heightDifference);
-         smallerElementSpeed = parentHeight / smallerElementHeight;
          smallerElementSpeed = parentHeight / heightDifference;
-         // smallerElementSpeed = 1.1;
          console.log("Скорость сдвига = " + smallerElementSpeed);
          tranfsorm = window.pageYOffset / smallerElementSpeed;
          currentTransform = parseInt(smallerElement.style.transform.match(/[-0-9.]+(?=px)/));
@@ -47,11 +45,12 @@ function parallax(e) {
 
          // ! Done
          if (
-            currentTransform < heightDifference ||
-            window.pageYOffset < heightDifference ||
-            window.pageYOffset < currentTransform
+            (currentTransform < heightDifference ||
+               window.pageYOffset < heightDifference ||
+               window.pageYOffset < currentTransform) &&
+            window.pageYOffset < parentHeight
          ) {
-            smallerElement.style.transform = `translateY(${tranfsorm - 3}px)`;
+            smallerElement.style.transform = `translateY(${tranfsorm}px)`;
          }
       }
    });
