@@ -127,92 +127,6 @@ input[type=submit],
 }
 
 @font-face {
-  font-family: "Catamaran";
-  font-display: swap;
-  src: url("../fonts/Catamaran-Regular.woff") format("woff"), url("../fonts/Catamaran-Regular.woff-2") format("woff-2");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Catamaran";
-  font-display: swap;
-  src: url("../fonts/Catamaran-Meidum.woff") format("woff"), url("../fonts/Catamaran-Meidum.woff-2") format("woff-2");
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Catamaran";
-  font-display: swap;
-  src: url("../fonts/Catamaran-SemiBold.woff") format("woff"), url("../fonts/Catamaran-SemiBold.woff-2") format("woff-2");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Catamaran";
-  font-display: swap;
-  src: url("../fonts/Catamaran-Bold.woff") format("woff"), url("../fonts/Catamaran-Bold.woff-2") format("woff-2");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Catamaran";
-  font-display: swap;
-  src: url("../fonts/Catamaran-ExtraBold.woff") format("woff"), url("../fonts/Catamaran-ExtraBold.woff-2") format("woff-2");
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Catamaran";
-  font-display: swap;
-  src: url("../fonts/Catamaran-Black.woff") format("woff"), url("../fonts/Catamaran-Black.woff-2") format("woff-2");
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Nunito";
-  font-display: swap;
-  src: url("../fonts/Nunito-Regular.woff") format("woff"), url("../fonts/Nunito-Regular.woff-2") format("woff-2");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Nunito";
-  font-display: swap;
-  src: url("../fonts/Nunito-Meidum.woff") format("woff"), url("../fonts/Nunito-Meidum.woff-2") format("woff-2");
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Nunito";
-  font-display: swap;
-  src: url("../fonts/Nunito-SemiBold.woff") format("woff"), url("../fonts/Nunito-SemiBold.woff-2") format("woff-2");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Nunito";
-  font-display: swap;
-  src: url("../fonts/Nunito-Bold.woff") format("woff"), url("../fonts/Nunito-Bold.woff-2") format("woff-2");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Philosopher";
-  font-display: swap;
-  src: url("../fonts/Philosopher-Regular.woff") format("woff"), url("../fonts/Philosopher-Regular.woff-2") format("woff-2");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "Philosopher";
   font-display: swap;
   src: url("../fonts/Philosopher-Bold.woff") format("woff"), url("../fonts/Philosopher-Bold.woff-2") format("woff-2");
@@ -228,72 +142,18 @@ input[type=submit],
   font-style: normal;
 }
 
-@font-face {
-  font-family: "Quicksand";
-  font-display: swap;
-  src: url("../fonts/Quicksand-Meidum.woff") format("woff"), url("../fonts/Quicksand-Meidum.woff-2") format("woff-2");
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Quicksand";
-  font-display: swap;
-  src: url("../fonts/Quicksand-SemiBold.woff") format("woff"), url("../fonts/Quicksand-SemiBold.woff-2") format("woff-2");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Quicksand";
-  font-display: swap;
-  src: url("../fonts/Quicksand-Bold.woff") format("woff"), url("../fonts/Quicksand-Bold.woff-2") format("woff-2");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "YanoneKaffeesatz";
-  font-display: swap;
-  src: url("../fonts/YanoneKaffeesatz-Regular.woff") format("woff"), url("../fonts/YanoneKaffeesatz-Regular.woff-2") format("woff-2");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "YanoneKaffeesatz";
-  font-display: swap;
-  src: url("../fonts/YanoneKaffeesatz-Meidum.woff") format("woff"), url("../fonts/YanoneKaffeesatz-Meidum.woff-2") format("woff-2");
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "YanoneKaffeesatz";
-  font-display: swap;
-  src: url("../fonts/YanoneKaffeesatz-SemiBold.woff") format("woff"), url("../fonts/YanoneKaffeesatz-SemiBold.woff-2") format("woff-2");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "YanoneKaffeesatz";
-  font-display: swap;
-  src: url("../fonts/YanoneKaffeesatz-Bold.woff") format("woff"), url("../fonts/YanoneKaffeesatz-Bold.woff-2") format("woff-2");
-  font-weight: 700;
-  font-style: normal;
-}
-
 body.lock {
   overflow: hidden;
 }
 
-body {
+.philosopher {
+  font-family: "Philosopher";
+}
+
+.body {
   background-color: #ddd;
   background-color: #fff;
-  font-family: "Catamaran";
-  font-family: "Philosopher";
   font-family: "Quicksand";
-  font-family: "YanoneKaffeesatz";
-  font-family: "Nunito";
 }
 
 .wrapper {
@@ -1217,19 +1077,6 @@ main {
   background-color: transparent;
 }
 
-.about:after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 0;
-  height: 0;
-  border: 0 solid transparent;
-  border-right-width: 0px;
-  border-left-width: 100vw;
-  border-top: 10vw solid #eeeeee;
-}
-
 .about__container {
   position: relative;
   z-index: 1;
@@ -1281,6 +1128,26 @@ main {
 
 .products {
   background-color: #fff;
+  position: relative;
+  z-index: 4;
+}
+
+.products:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-right-width: 0px;
+  border-left-width: 100vw;
+  border-top: 10vw solid #eeeeee;
+}
+
+.products__container {
+  position: relative;
+  z-index: 1;
 }
 
 .products__title {
@@ -1378,6 +1245,7 @@ main {
 .services {
   background-color: #eeeeee;
   position: relative;
+  z-index: 4;
 }
 
 .services:after {
@@ -1397,7 +1265,7 @@ main {
 
 .services__container {
   position: relative;
-  z-index: 1;
+  z-index: 3;
 }
 
 .services__images {
@@ -1405,33 +1273,37 @@ main {
   padding-bottom: 52.4405506884%;
 }
 
+.services__circle {
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  background-color: #48a748;
+  top: 50%;
+  left: -25%;
+  transform: translateY(-50%);
+  width: 80.645%;
+  height: 153.789%;
+}
+
 .services__image {
   position: absolute;
-  height: 100%;
+  top: 50%;
+  left: 0;
   width: 100%;
+  transform: translateY(-50%);
+  padding-bottom: 31.8785578748%;
 }
 
 .services__image img {
   position: absolute;
-  top: 50%;
-  left: 44%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
   -o-object-position: center;
   object-position: center;
-}
-
-.services__image_1 img {
-  width: 95%;
-  height: 80%;
-  z-index: 1;
-  transform: translate(-35%, -50%);
-}
-
-.services__image_2 img {
-  width: 100%;
-  height: 100%;
-  transform: translate(-50%, -50%);
 }
 
 .services__title {
@@ -1445,8 +1317,6 @@ main {
 }
 
 .services-item {
-  padding: 30px;
-  border-radius: 40px;
   transition: transform 1s ease;
 }
 
@@ -1595,7 +1465,7 @@ main {
     padding-right: 2.9296875%;
   }
 
-  body {
+  .body {
     font-size: 1.25rem;
     line-height: 1.25;
   }
@@ -1746,11 +1616,10 @@ main {
   }
 
   .products__container {
-    padding-top: 14vw;
+    padding-top: 10vw;
     padding-bottom: 14vw;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    margin-top: -68px;
   }
 
   .products__title {
@@ -1843,6 +1712,11 @@ main {
     grid-column: span 12;
     gap: 35px;
     row-gap: 60px;
+  }
+
+  .services-item {
+    padding: 30px;
+    border-radius: 40px;
   }
 
   .services-item__title {
@@ -2033,7 +1907,7 @@ main {
 }
 
 @media (max-width: 768px) {
-  body {
+  .body {
     font-size: 1rem;
     line-height: 1.25;
   }
@@ -2122,6 +1996,11 @@ main {
     margin-bottom: 12px;
   }
 
+  .products__container {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+  }
+
   .products__content {
     margin-bottom: 60px;
   }
@@ -2168,6 +2047,11 @@ main {
 
   .services__content {
     row-gap: 40px;
+  }
+
+  .services-item {
+    padding: 18px;
+    border-radius: 25px;
   }
 
   .services-item__title {
@@ -2224,13 +2108,6 @@ main {
   }
 }
 
-@media (max-width: 468px) {
-  .products__container {
-    padding-top: 20vw;
-    padding-bottom: 20vw;
-  }
-}
-
 @media (min-width: 568px) and (max-width: 768px) {
   .home__container {
     padding-top: 6vw;
@@ -2246,18 +2123,6 @@ main {
     grid-template-columns: 1fr 1fr;
     -moz-column-gap: 30px;
     column-gap: 30px;
-  }
-
-  .products__container {
-    padding-top: 12vw;
-    padding-bottom: 18vw;
-  }
-}
-
-@media (min-width: 469px) and (max-width: 567px) {
-  .products__container {
-    padding-top: 16vw;
-    padding-bottom: 16vw;
   }
 }
 

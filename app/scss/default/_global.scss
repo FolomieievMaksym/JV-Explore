@@ -2,14 +2,18 @@ body.lock {
    overflow: hidden;
 }
 
-body {
+.philosopher {
+   font-family: $ff3;
+}
+
+.body {
    background-color: $lightGrey;
    background-color: $light;
-   font-family: $ff1;
-   font-family: $ff3;
+   // font-family: $ff1;
+   // font-family: $ff2;
+   // font-family: $ff3;
+   // font-family: $ff5;
    font-family: $ff4;
-   font-family: $ff5;
-   font-family: $ff2;
    @media (max-width: 768px) {
       @include fl(16);
    }

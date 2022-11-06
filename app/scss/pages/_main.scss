@@ -527,18 +527,18 @@
       z-index: -1;
       background-color: transparent;
    }
-   &:after {
-      content: "";
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 0;
-      height: 0;
-      border: 0 solid transparent;
-      border-right-width: 0px;
-      border-left-width: 100vw;
-      border-top: 10vw solid $lightGreyBg;
-   }
+   // &:after {
+   //    content: "";
+   //    position: absolute;
+   //    top: 100%;
+   //    left: 0;
+   //    width: 0;
+   //    height: 0;
+   //    border: 0 solid transparent;
+   //    border-right-width: 0px;
+   //    border-left-width: 100vw;
+   //    border-top: 10vw solid $lightGreyBg;
+   // }
    // .about__container
    &__container {
       @extend %container;
@@ -702,27 +702,38 @@
 // ! Products === Products === Products === Products === Products
 .products {
    background-color: $light;
+   position: relative;
+   z-index: 4;
+   &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border: 0 solid transparent;
+      border-right-width: 0px;
+      border-left-width: 100vw;
+      border-top: 10vw solid $lightGreyBg;
+      @media (min-width: 769px) {
+         // top: 68px;
+      }
+   }
    // .products__container
    &__container {
+      position: relative;
+      z-index: 1;
       @extend %container;
-      @media (max-width: 468px) {
-         padding-top: 20vw;
-         padding-bottom: 20vw;
-      }
-      @media (min-width: 469px) and (max-width: 567px) {
-         padding-top: 16vw;
-         padding-bottom: 16vw;
-      }
-      @media (min-width: 568px) and (max-width: 768px) {
-         padding-top: 12vw;
-         padding-bottom: 18vw;
+      @media (max-width: 768px) {
+         padding-top: 80px !important; // CHANGE
+         padding-bottom: 80px !important; // CHANGE
       }
       @media (min-width: 769px) {
-         padding-top: 14vw;
+         padding-top: 10vw;
          padding-bottom: 14vw;
          display: grid;
          grid-template-columns: repeat(12, 1fr);
-         margin-top: -68px;
+         // margin-top: -68px; // change !important
       }
    }
 
@@ -921,6 +932,7 @@
 .services {
    background-color: $lightGreyBg;
    position: relative;
+   z-index: 4;
    &:after {
       content: "";
       position: absolute;
@@ -942,7 +954,7 @@
    &__container {
       @extend %container;
       position: relative;
-      z-index: 1;
+      z-index: 3;
       @media (max-width: 768px) {
          padding-bottom: 60px;
          padding-top: 50px;
@@ -969,40 +981,70 @@
          grid-column: 1/8;
       }
    }
+   // todo !important change
+   // &__image {
+   //    position: absolute;
+   //    height: 100%;
+   //    width: 100%;
+   //    img {
+   //       position: absolute;
+   //       top: 50%;
+   //       left: 44%;
+   //       object-fit: cover;
+   //       object-position: center;
+   //    }
+   //    &_1 {
+   //       // // padding-bottom: percent(419, 799);
+   //       img {
+   //          // top: 10%;
+   //          // left: 15%;
+   //          width: 95%;
+   //          height: 80%;
+   //          z-index: 1;
+   //          transform: translate(-35%, -50%);
+   //       }
+   //    }
+   //    &_2 {
+   //       // // padding-bottom: percent(500, 813);
+   //       img {
+   //          // top: 0;
+   //          // left: 0;
+   //          width: 100%;
+   //          height: 100%;
+   //          transform: translate(-50%, -50%);
+   //       }
+   //    }
+   // }
+
+   &__circle {
+      position: absolute;
+      z-index: 0;
+      border-radius: 50%;
+      background-color: $green;
+
+      top: 50%;
+      left: -25%;
+      transform: translateY(-50%);
+      width: 80.645%;
+      height: 153.789%;
+   }
    &__image {
       position: absolute;
-      height: 100%;
+      top: 50%;
+      left: 0;
       width: 100%;
+      transform: translateY(-50%);
+      padding-bottom: percent(336, 1054);
       img {
          position: absolute;
-         top: 50%;
-         left: 44%;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
          object-fit: cover;
          object-position: center;
       }
-      &_1 {
-         // // padding-bottom: percent(419, 799);
-         img {
-            // top: 10%;
-            // left: 15%;
-            width: 95%;
-            height: 80%;
-            z-index: 1;
-            transform: translate(-35%, -50%);
-         }
-      }
-      &_2 {
-         // // padding-bottom: percent(500, 813);
-         img {
-            // top: 0;
-            // left: 0;
-            width: 100%;
-            height: 100%;
-            transform: translate(-50%, -50%);
-         }
-      }
    }
-
    // .services__title
 
    &__title {
@@ -1047,8 +1089,14 @@
    }
 }
 .services-item {
-   padding: 30px;
-   border-radius: 40px;
+   @media (max-width: 768px) {
+      padding: 18px;
+      border-radius: 25px;
+   }
+   @media (min-width: 769px) {
+      padding: 30px;
+      border-radius: 40px;
+   }
    @media (max-width: 649px) {
       &:nth-child(odd) {
          background-color: $greenCardDark;
