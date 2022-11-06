@@ -1069,7 +1069,7 @@ main {
 
 .about {
   position: relative;
-  background-color: #eeeeee !important;
+  background-color: #eeeeee;
   z-index: 3;
 }
 
@@ -1111,7 +1111,6 @@ main {
 }
 
 .about__right .subtitle {
-  white-space: nowrap;
   position: relative;
   font-weight: 900;
 }
@@ -1119,9 +1118,9 @@ main {
 .about__right .subtitle:after {
   content: "";
   position: absolute;
-  left: 10% !important;
-  right: -20% !important;
-  height: 5px !important;
+  left: 10%;
+  right: -20%;
+  height: 5px;
   border-radius: 20px;
   background: #48a748;
 }
@@ -1152,7 +1151,7 @@ main {
 }
 
 .products {
-  background-color: #fff !important;
+  background-color: #fff;
 }
 
 .products__title {
@@ -1248,7 +1247,7 @@ main {
 }
 
 .services {
-  background-color: #eeeeee !important;
+  background-color: #eeeeee;
   position: relative;
 }
 
@@ -1594,19 +1593,19 @@ main {
   }
 
   .about__right .subtitle:after {
-    bottom: 23px !important;
-  }
-
-  .about__right {
-    grid-column: 7/13;
-    grid-template-columns: 1fr;
+    bottom: 23px;
   }
 
   .about__right .subtitle {
     margin-bottom: -30px !important;
     margin-top: -66px;
-    font-size: 3rem;
+    font-size: 2.375rem;
     line-height: 1.25;
+  }
+
+  .about__right {
+    grid-column: 7/13;
+    grid-template-columns: 1fr;
   }
 
   .about__text:last-child {
@@ -1769,6 +1768,13 @@ main {
 
   .burger {
     display: none;
+  }
+}
+
+@media (min-width: 990px) {
+  .about__right .subtitle {
+    font-size: 3rem;
+    line-height: 1.25;
   }
 }
 
@@ -2102,15 +2108,15 @@ main {
     padding-bottom: 80px;
   }
 
+  .about__right .subtitle {
+    grid-column: span 2;
+    margin-top: -20px;
+  }
+
   .about__right {
     grid-template-columns: 1fr 1fr;
     -moz-column-gap: 30px;
     column-gap: 30px;
-  }
-
-  .about__right .subtitle {
-    grid-column: span 2;
-    margin-top: -20px;
   }
 
   .products__container {

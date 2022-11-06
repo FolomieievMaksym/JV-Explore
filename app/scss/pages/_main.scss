@@ -510,7 +510,7 @@
 // ! About === About === About === About === About === About ===
 .about {
    position: relative;
-   background-color: $lightGreyBg !important;
+   background-color: $lightGreyBg;
    z-index: 3;
    &:before {
       content: "";
@@ -604,7 +604,7 @@
 
    &__right {
       .subtitle {
-         white-space: nowrap;
+         // white-space: nowrap;
          position: relative;
          font-weight: 900;
          @media (max-width: 768px) {
@@ -615,36 +615,40 @@
          &:after {
             content: "";
             position: absolute;
-            left: 10% !important;
-            right: -20% !important;
-            height: 5px !important;
+            left: 10%;
+            right: -20%;
+            height: 5px;
             border-radius: 20px;
             background: $green;
             @media (max-width: 768px) {
                bottom: -7.5px;
             }
             @media (min-width: 769px) {
-               bottom: 23px !important;
+               bottom: 23px;
             }
+         }
+         @media (min-width: 568px) and (max-width: 768px) {
+            grid-column: span 2;
+            margin-top: -20px;
+         }
+         @media (min-width: 769px) {
+            margin-bottom: -30px !important;
+            margin-top: -66px;
+            @include fl(38);
+         }
+         @media (min-width: 990px) {
+            @include fl(48);
          }
       }
       @media (min-width: 568px) and (max-width: 768px) {
          grid-template-columns: 1fr 1fr;
          column-gap: 30px;
-         .subtitle {
-            grid-column: span 2;
-            margin-top: -20px;
-         }
       }
       @media (min-width: 769px) {
          grid-column: 7/13;
          grid-template-columns: 1fr;
-         .subtitle {
-            margin-bottom: -30px !important;
-            margin-top: -66px;
-            @include fl(48);
-         }
       }
+
       @media (min-width: 1200px) {
          grid-template-columns: 1fr 1fr;
          column-gap: 30px;
@@ -697,7 +701,7 @@
 // ! Products === Products === Products === Products === Products
 // ! Products === Products === Products === Products === Products
 .products {
-   background-color: $light !important;
+   background-color: $light;
    // .products__container
    &__container {
       @extend %container;
@@ -915,7 +919,7 @@
 // ! Services === Services === Services === Services === Services
 // ! Services === Services === Services === Services === Services
 .services {
-   background-color: $lightGreyBg !important;
+   background-color: $lightGreyBg;
    position: relative;
    &:after {
       content: "";
