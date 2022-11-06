@@ -59,9 +59,13 @@ section {
    // .items__item
    &__item {
       display: grid;
-      grid-template-columns: 13% 1fr;
-      column-gap: 15px;
-      column-gap: 37px;
+      grid-template-columns: auto 1fr;
+      @media (max-width: 768px) {
+         column-gap: 15px;
+      }
+      @media (min-width: 769px) {
+         column-gap: 37px;
+      }
       &:nth-child(3) {
          .items__icon {
             path {
@@ -86,9 +90,6 @@ section {
    // items__icon
 
    &__icon {
-      flex: 0 0 70px;
-      width: 70px;
-      height: 70px;
       background: linear-gradient(90deg, rgb(0, 144, 19) 0%, rgb(0, 232, 0) 100%);
       border: 3px solid $light;
       border-radius: 50%;
@@ -96,6 +97,16 @@ section {
       display: flex;
       justify-content: center;
       align-items: center;
+      @media (max-width: 768px) {
+         flex: 0 0 50px;
+         width: 50px;
+         height: 50px;
+      }
+      @media (min-width: 769px) {
+         flex: 0 0 70px;
+         width: 70px;
+         height: 70px;
+      }
       svg {
          max-width: 100%;
          width: 50px;
@@ -144,28 +155,8 @@ section {
 // ! Home === Home === Home === Home === Home === Home === Home
 // ! Home === Home === Home === Home === Home === Home === Home
 // ! Home === Home === Home === Home === Home === Home === Home
-.home-triangle {
-   position: relative;
-   height: 10vw;
-}
 .home {
    position: relative;
-   overflow: visible;
-   &:after {
-      content: "";
-      position: absolute;
-      // top: 100%;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 0;
-      border: 0 solid transparent;
-      border-left-width: 0px;
-      border-right-width: 100vw;
-      border-top: 10vw solid $grey;
-      z-index: 2;
-      background-color: $lightGreyBg;
-   }
    @media (min-width: 769px) {
       &:before {
          content: "";
@@ -192,11 +183,11 @@ section {
       @extend %container;
       @media (max-width: 567px) {
          padding-top: 9vw;
-         padding-bottom: 12vw;
+         padding-bottom: 80px;
       }
       @media (min-width: 568px) and (max-width: 768px) {
-         padding-top: 4vw;
-         padding-bottom: 6vw;
+         padding-top: 6vw;
+         padding-bottom: 80px;
       }
       @media (min-width: 769px) {
          padding-top: 6vw;
@@ -534,22 +525,21 @@ section {
    position: relative;
    background-color: $lightGreyBg !important;
    z-index: 3;
-   // &__fix {
-   //    @media (min-width: 769px) {
-   //       position: relative;
-   //       &:after {
-   //          content: "";
-   //          position: absolute;
-   //          bottom: 100%;
-   //          left: -10%;
-   //          width: 120%;
-   //          height: 5vw;
-   //          background: $light;
-   //          transform: rotate(354.3deg);
-   //       }
-   //    }
-   // }
-   // z-index: 4;
+   &:before {
+      content: "";
+      position: absolute;
+      // top: 100%;
+      top: -10vw;
+      left: 0;
+      width: 0;
+      height: 0;
+      border: 0 solid transparent;
+      border-right-width: 0px;
+      border-left-width: 100vw;
+      border-bottom: 10vw solid $lightGreyBg;
+      z-index: -1;
+      background-color: transparent;
+   }
    &:after {
       content: "";
       position: absolute;
@@ -567,18 +557,15 @@ section {
       @extend %container;
       position: relative;
       z-index: 1;
-      @media (max-width: 468px) {
-         padding-top: 20vw;
-      }
-      @media (min-width: 469px) and (max-width: 567px) {
-         padding-top: 16vw;
-      }
-      @media (max-width: 567px) {
-         padding-bottom: 12vw;
-      }
-      @media (min-width: 568px) and (max-width: 768px) {
-         padding-top: 12vw;
-         padding-bottom: 9vw;
+      // @media (max-width: 567px) {
+      //    padding-bottom: 12vw;
+      // }
+      // @media (min-width: 568px) and (max-width: 768px) {
+      //    padding-bottom: 9vw;
+      // }
+      @media (max-width: 768px) {
+         padding-top: 60px;
+         padding-bottom: 70px;
       }
       @media (min-width: 769px) {
          padding-top: 14vw;
@@ -606,7 +593,6 @@ section {
    &__content {
       @media (min-width: 769px) {
          align-items: center;
-         // align-items: start !important;
       }
    }
 
@@ -614,7 +600,13 @@ section {
 
    &__left {
       @media (max-width: 768px) {
-         margin-bottom: 40px;
+         margin-bottom: 50px;
+         h3 {
+            margin-bottom: 32px;
+            &:last-of-type {
+               padding-top: 20px;
+            }
+         }
       }
       @media (min-width: 769px) {
          grid-column: 1/6;
@@ -630,6 +622,8 @@ section {
          font-weight: 900;
          @media (max-width: 768px) {
             @include fl(30);
+            display: inline-block;
+            max-width: max-content;
          }
          &:after {
             content: "";
@@ -688,27 +682,15 @@ section {
          border-radius: 20px;
          background: $green;
       }
-      // &:first-of-type {
-      //    &:after {
-      //       left: 10%;
-      //       right: -20%;
-      //    }
-      // }
-      // &:last-of-type {
-      //    &:after {
-      //       left: -10%;
-      //       right: 20%;
-      //    }
-      // }
-   }
-   &__subtitle {
    }
 
    // .about__text
 
    &__text {
       &:last-child {
-         padding-top: 10px;
+         @media (min-width: 769px) {
+            padding-top: 10px;
+         }
       }
       &:not(:last-child) {
          @media (max-width: 768px) {
@@ -757,8 +739,10 @@ section {
    &__title {
       color: $dark;
       // transform: translateY(-68px) !important;
-
-      @media (max-width: 768px) {
+      @media (max-width: 568px) {
+         @include fl(40);
+      }
+      @media (min-width: 569px) and (max-width: 768px) {
          @include fl(52);
       }
       @media (min-width: 769px) {
@@ -772,7 +756,7 @@ section {
 
    &__content {
       @media (max-width: 768px) {
-         margin-bottom: 40px;
+         margin-bottom: 60px;
       }
       @media (min-width: 769px) {
          row-gap: 60px;
@@ -781,52 +765,6 @@ section {
    }
 
    &__item {
-      // &:first-of-type {
-      //    .subtitle {
-      //       &:after {
-      //          // content: "";
-      //          // position: absolute;
-      //          // left: -20px;
-      //          // right: -20px;
-      //          // height: 2px;
-      //          // background: $green;
-      //          content: "";
-      //          position: absolute;
-      //          left: -10%;
-      //          right: 18%;
-      //          bottom: -7.5px;
-      //          height: 4px;
-      //          border-radius: 20px;
-      //          background: $green;
-      //          @media (max-width: 768px) {
-      //             bottom: -15px;
-      //          }
-      //          @media (min-width: 769px) {
-      //             bottom: -30px;
-      //          }
-      //       }
-      //    }
-      // }
-      // &:last-of-type {
-      //    .subtitle {
-      //       &:after {
-      //          content: "";
-      //          position: absolute;
-      //          left: 10% !important;
-      //          right: -18% !important;
-      //          bottom: -7.5px;
-      //          height: 4px;
-      //          border-radius: 20px;
-      //          background: $green;
-      //          @media (max-width: 768px) {
-      //             bottom: -15px;
-      //          }
-      //          @media (min-width: 769px) {
-      //             bottom: -30px;
-      //          }
-      //       }
-      //    }
-      // }
       @media (min-width: 769px) {
          grid-column: span 12;
          display: grid;
@@ -880,7 +818,7 @@ section {
          left: -20px;
          right: -20px;
          bottom: 0;
-         box-shadow: inset 0 -20px 20px $light, inset 0 -20px 20px $light;
+         box-shadow: inset 0 -20px 20px $light, inset 0 -20px 20px $light, 0 2px 2px $light, inset 0 2px 0px $light;
       }
       &_1 {
          padding-bottom: percent(187, 308);
@@ -932,12 +870,6 @@ section {
          height: 5px;
          border-radius: 20px;
          background: $green;
-         // left: -10%;
-         // right: 18%;
-         // bottom: -7.5px;
-         // height: 4px;
-         // border-radius: 20px;
-         // background: $green;
          @media (max-width: 768px) {
             bottom: -10px;
          }
@@ -945,9 +877,14 @@ section {
             bottom: -5px;
          }
       }
-      @media (max-width: 768px) {
-         margin-bottom: 30px;
+      @media (max-width: 568px) {
+         @include fl(34);
+      }
+      @media (min-width: 569px) and (max-width: 768px) {
          @include fl(40);
+      }
+      @media (max-width: 768px) {
+         margin-bottom: 32px;
       }
       @media (min-width: 769px) {
          @include fl(58);
@@ -991,21 +928,6 @@ section {
 // ! Services === Services === Services === Services === Services
 .services {
    background-color: $lightGreyBg !important;
-   // position: relative;
-   // z-index: 3;
-   // &:after {
-   //    content: "";
-   //    position: absolute;
-   //    bottom: 100%;
-   //    left: 0;
-   //    width: 0;
-   //    height: 0;
-   //    border: 0 solid transparent;
-   //    border-right-width: 0px;
-   //    border-left-width: 100vw;
-   //    border-bottom: 10vw solid $grey;
-   //    border-bottom: 10vw solid $light;
-   // }
    position: relative;
    &:after {
       content: "";
@@ -1030,8 +952,8 @@ section {
       position: relative;
       z-index: 1;
       @media (max-width: 768px) {
-         padding-bottom: 9vw;
-         padding-top: 12vw;
+         padding-bottom: 60px;
+         padding-top: 50px;
          display: grid;
       }
       @media (min-width: 769px) {
@@ -1098,31 +1020,33 @@ section {
          grid-row: 1/2;
          order: 1;
          @include fl(40);
-         // @include fl(52);
+         margin-bottom: 40px;
       }
       @media (min-width: 769px) {
          grid-column: 9/12;
          margin-bottom: 0;
          align-self: center;
          @include fl(58);
-         // @include fl(70);
       }
    }
    // .services__content
 
    &__content {
       display: grid;
-      row-gap: 60px;
       @media (max-width: 568px) {
          grid-template-columns: 1fr;
       }
-      @media (min-width: 569px) and (max-width: 1599px) {
+      @media (min-width: 650px) and (max-width: 1599px) {
          grid-template-columns: 1fr 1fr;
          column-gap: 30px;
+      }
+      @media (max-width: 768px) {
+         row-gap: 40px;
       }
       @media (min-width: 769px) {
          grid-column: span 12;
          gap: 35px;
+         row-gap: 60px;
       }
       @media (min-width: 1600px) {
          grid-template-columns: repeat(4, 1fr);
@@ -1289,7 +1213,7 @@ section {
       position: relative;
       z-index: 1;
       @media (max-width: 768px) {
-         padding-top: 9vw;
+         padding-top: 70px;
          padding-bottom: 20px;
       }
       @media (min-width: 769px) {

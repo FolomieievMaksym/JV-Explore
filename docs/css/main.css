@@ -745,11 +745,7 @@ section:nth-child(even) {
 
 .items__item {
   display: grid;
-  grid-template-columns: 13% 1fr;
-  -moz-column-gap: 15px;
-  column-gap: 15px;
-  -moz-column-gap: 37px;
-  column-gap: 37px;
+  grid-template-columns: auto 1fr;
 }
 
 .items__item:nth-child(3) .items__icon path {
@@ -767,9 +763,6 @@ section:nth-child(even) {
 }
 
 .items__icon {
-  flex: 0 0 70px;
-  width: 70px;
-  height: 70px;
   background: linear-gradient(90deg, rgb(0, 144, 19) 0%, rgb(0, 232, 0) 100%);
   border: 3px solid #fff;
   border-radius: 50%;
@@ -816,29 +809,8 @@ section:nth-child(even) {
   max-width: 5vmax;
 }
 
-.home-triangle {
-  position: relative;
-  height: 10vw;
-}
-
 .home {
   position: relative;
-  overflow: visible;
-}
-
-.home:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  border: 0 solid transparent;
-  border-left-width: 0px;
-  border-right-width: 100vw;
-  border-top: 10vw solid #485162;
-  z-index: 2;
-  background-color: #eeeeee;
 }
 
 .home__left-wrapper {
@@ -1120,6 +1092,21 @@ section:nth-child(even) {
   z-index: 3;
 }
 
+.about:before {
+  content: "";
+  position: absolute;
+  top: -10vw;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-right-width: 0px;
+  border-left-width: 100vw;
+  border-bottom: 10vw solid #eeeeee;
+  z-index: -1;
+  background-color: transparent;
+}
+
 .about:after {
   content: "";
   position: absolute;
@@ -1175,10 +1162,6 @@ section:nth-child(even) {
   background: #48a748;
 }
 
-.about__text:last-child {
-  padding-top: 10px;
-}
-
 .about__text_bold {
   font-weight: 600;
 }
@@ -1214,7 +1197,7 @@ section:nth-child(even) {
   left: -20px;
   right: -20px;
   bottom: 0;
-  box-shadow: inset 0 -20px 20px #fff, inset 0 -20px 20px #fff;
+  box-shadow: inset 0 -20px 20px #fff, inset 0 -20px 20px #fff, 0 2px 2px #fff, inset 0 2px 0px #fff;
 }
 
 .products__image_1 {
@@ -1343,7 +1326,6 @@ section:nth-child(even) {
 
 .services__content {
   display: grid;
-  row-gap: 60px;
 }
 
 .services-item {
@@ -1542,6 +1524,17 @@ section:nth-child(even) {
     row-gap: 50px;
   }
 
+  .items__item {
+    -moz-column-gap: 37px;
+    column-gap: 37px;
+  }
+
+  .items__icon {
+    flex: 0 0 70px;
+    width: 70px;
+    height: 70px;
+  }
+
   .home:before {
     content: "";
     position: absolute;
@@ -1629,6 +1622,10 @@ section:nth-child(even) {
     margin-top: -66px;
     font-size: 3rem;
     line-height: 1.25;
+  }
+
+  .about__text:last-child {
+    padding-top: 10px;
   }
 
   .about__text:not(:last-child) {
@@ -1732,6 +1729,7 @@ section:nth-child(even) {
   .services__content {
     grid-column: span 12;
     gap: 35px;
+    row-gap: 60px;
   }
 
   .services-item__title {
@@ -1964,6 +1962,17 @@ section:nth-child(even) {
     row-gap: 32px;
   }
 
+  .items__item {
+    -moz-column-gap: 15px;
+    column-gap: 15px;
+  }
+
+  .items__icon {
+    flex: 0 0 50px;
+    width: 50px;
+    height: 50px;
+  }
+
   .home__left {
     margin-bottom: 60px;
   }
@@ -1987,13 +1996,29 @@ section:nth-child(even) {
     color: #fff;
   }
 
+  .about__container {
+    padding-top: 60px;
+    padding-bottom: 70px;
+  }
+
   .about__left {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
+  }
+
+  .about__left h3 {
+    margin-bottom: 32px;
+  }
+
+  .about__left h3:last-of-type {
+    padding-top: 20px;
   }
 
   .about__right .subtitle {
     font-size: 1.875rem;
     line-height: 1.25;
+    display: inline-block;
+    max-width: -moz-max-content;
+    max-width: max-content;
   }
 
   .about__right .subtitle:after {
@@ -2004,13 +2029,8 @@ section:nth-child(even) {
     margin-bottom: 12px;
   }
 
-  .products__title {
-    font-size: 3.25rem;
-    line-height: 1.25;
-  }
-
   .products__content {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
   }
 
   .products__image_1 {
@@ -2026,9 +2046,7 @@ section:nth-child(even) {
   }
 
   .products__item-title {
-    margin-bottom: 30px;
-    font-size: 2.5rem;
-    line-height: 1.25;
+    margin-bottom: 32px;
   }
 
   .products__info {
@@ -2036,8 +2054,8 @@ section:nth-child(even) {
   }
 
   .services__container {
-    padding-bottom: 9vw;
-    padding-top: 12vw;
+    padding-bottom: 60px;
+    padding-top: 50px;
     display: grid;
   }
 
@@ -2052,6 +2070,11 @@ section:nth-child(even) {
     order: 1;
     font-size: 2.5rem;
     line-height: 1.25;
+    margin-bottom: 40px;
+  }
+
+  .services__content {
+    row-gap: 40px;
   }
 
   .services-item__title {
@@ -2063,7 +2086,7 @@ section:nth-child(even) {
   }
 
   .contacts__container {
-    padding-top: 9vw;
+    padding-top: 70px;
     padding-bottom: 20px;
   }
 
@@ -2086,6 +2109,16 @@ section:nth-child(even) {
 }
 
 @media (max-width: 568px) {
+  .products__title {
+    font-size: 2.5rem;
+    line-height: 1.25;
+  }
+
+  .products__item-title {
+    font-size: 2.125rem;
+    line-height: 1.25;
+  }
+
   .services__content {
     grid-template-columns: 1fr;
   }
@@ -2094,19 +2127,11 @@ section:nth-child(even) {
 @media (max-width: 567px) {
   .home__container {
     padding-top: 9vw;
-    padding-bottom: 12vw;
-  }
-
-  .about__container {
-    padding-bottom: 12vw;
+    padding-bottom: 80px;
   }
 }
 
 @media (max-width: 468px) {
-  .about__container {
-    padding-top: 20vw;
-  }
-
   .products__container {
     padding-top: 20vw;
     padding-bottom: 20vw;
@@ -2115,13 +2140,8 @@ section:nth-child(even) {
 
 @media (min-width: 568px) and (max-width: 768px) {
   .home__container {
-    padding-top: 4vw;
-    padding-bottom: 6vw;
-  }
-
-  .about__container {
-    padding-top: 12vw;
-    padding-bottom: 9vw;
+    padding-top: 6vw;
+    padding-bottom: 80px;
   }
 
   .about__right {
@@ -2142,17 +2162,25 @@ section:nth-child(even) {
 }
 
 @media (min-width: 469px) and (max-width: 567px) {
-  .about__container {
-    padding-top: 16vw;
-  }
-
   .products__container {
     padding-top: 16vw;
     padding-bottom: 16vw;
   }
 }
 
-@media (min-width: 569px) and (max-width: 1599px) {
+@media (min-width: 569px) and (max-width: 768px) {
+  .products__title {
+    font-size: 3.25rem;
+    line-height: 1.25;
+  }
+
+  .products__item-title {
+    font-size: 2.5rem;
+    line-height: 1.25;
+  }
+}
+
+@media (min-width: 650px) and (max-width: 1599px) {
   .services__content {
     grid-template-columns: 1fr 1fr;
     -moz-column-gap: 30px;
