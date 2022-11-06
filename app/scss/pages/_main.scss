@@ -1,21 +1,6 @@
-section {
-   &:nth-child(odd) {
-      background-color: $light;
-      background-color: $grey;
-      color: $greyText;
-      color: $light;
-   }
-   &:nth-child(even) {
-      min-height: 300px;
-      background-color: $grey;
-      background-color: $light;
-      color: $light;
-      color: $greyText;
-   }
-}
 .title {
-   color: $dark;
-   font-weight: 700;
+   // color: $dark;
+   // font-weight: 700;
    @media (max-width: 768px) {
       @include fl(30);
       margin-bottom: 28px;
@@ -64,7 +49,7 @@ section {
          column-gap: 15px;
       }
       @media (min-width: 769px) {
-         column-gap: 37px;
+         column-gap: 30px;
       }
       &:nth-child(3) {
          .items__icon {
@@ -156,6 +141,7 @@ section {
 // ! Home === Home === Home === Home === Home === Home === Home
 // ! Home === Home === Home === Home === Home === Home === Home
 .home {
+   background-color: $grey;
    position: relative;
    @media (min-width: 769px) {
       &:before {
@@ -475,6 +461,7 @@ section {
       @media (max-width: 768px) {
          @include fl(34);
          margin-bottom: 16px;
+         color: $light;
       }
       @media (min-width: 769px) {
          @include fl(50);
@@ -687,6 +674,7 @@ section {
    // .about__text
 
    &__text {
+      color: $greyText;
       &:last-child {
          @media (min-width: 769px) {
             padding-top: 10px;
@@ -738,7 +726,7 @@ section {
 
    &__title {
       color: $dark;
-      // transform: translateY(-68px) !important;
+      font-weight: 700;
       @media (max-width: 568px) {
          @include fl(40);
       }
@@ -969,7 +957,7 @@ section {
       position: relative;
       padding-bottom: percent(419, 799);
       @media (max-width: 768px) {
-         margin-bottom: 40px;
+         margin-bottom: 60px;
          grid-row: 2/3;
          order: 2;
       }
@@ -979,7 +967,6 @@ section {
    }
    &__image {
       position: absolute;
-      // overflow: hidden;
       height: 100%;
       width: 100%;
       img {
@@ -1015,6 +1002,8 @@ section {
    // .services__title
 
    &__title {
+      font-weight: 700;
+      color: $dark;
       text-align: right;
       @media (max-width: 768px) {
          grid-row: 1/2;
@@ -1056,21 +1045,23 @@ section {
 .services-item {
    padding: 30px;
    border-radius: 40px;
-   @media (max-width: 1599px) {
-      border-radius: 40px;
-      &:first-child {
+   @media (max-width: 649px) {
+      &:nth-child(odd) {
          background-color: $greenCardDark;
       }
-      &:nth-child(2) {
-         // border: 5px solid $lightGreyBg;
+      &:nth-child(even) {
          background-color: $greenCardLight;
       }
-      &:nth-child(3) {
-         // border: 5px solid $lightGreyBg;
-         background-color: $greenCardLight;
-      }
+   }
+   @media (min-width: 650px) and (max-width: 1599px) {
+      border-radius: 40px;
+      &:first-child,
       &:last-child {
          background-color: $greenCardDark;
+      }
+      &:nth-child(2),
+      &:nth-child(3) {
+         background-color: $greenCardLight;
       }
    }
    @media (min-width: 1600px) {
@@ -1083,21 +1074,17 @@ section {
    }
    transition: transform 1s ease;
    &:hover {
-      transform: scale(1.02) !important;
+      transform: scale(1.02) !important; // must be because of js animation .onscroll
    }
    // .services-item__image
 
    &__image {
-      margin-bottom: 20px;
-      display: block;
-      // ! New
-      background-color: $green;
       background: linear-gradient(90deg, rgb(0, 144, 19) 0%, rgb(0, 232, 0) 100%);
       border: 3px solid $light;
       border-radius: 50%;
-      // padding: 10px;
       width: 60px;
       height: 60px;
+      margin-bottom: 20px;
       position: relative;
       svg,
       img {
@@ -1106,6 +1093,8 @@ section {
          left: 100%;
          transform: translate(-50%, -50%);
          height: auto;
+      }
+      svg {
          width: 90%;
       }
       &_3 {
@@ -1125,36 +1114,22 @@ section {
    &__title {
       display: inline-block;
       color: $green;
-      position: relative;
-      margin-bottom: 35px;
       font-weight: 600;
       @media (max-width: 768px) {
-         @include fl(22);
          @include fl(24);
          margin-bottom: 28px;
       }
       @media (min-width: 769px) {
-         @include fl(28);
          @include fl(30);
-
          margin-bottom: 48px;
       }
-      // &:after {
-      //    content: "";
-      //    position: absolute;
-      //    bottom: -5px;
-      //    left: 0;
-      //    width: 100%;
-      //    height: 1px;
-      //    background: $green;
-      // }
-      // ! new
+      position: relative;
       &:after {
          content: "";
          position: absolute;
-         left: 10% !important;
-         right: -20% !important;
-         height: 5px !important;
+         left: 10%;
+         right: -20%;
+         height: 5px;
          border-radius: 20px;
          background: $green;
          bottom: -10px;
@@ -1166,11 +1141,6 @@ section {
    &__content {
       display: grid;
       row-gap: 15px;
-   }
-
-   // .services-item__text
-
-   &__text {
    }
 
    // .services-item__list
@@ -1193,6 +1163,8 @@ section {
 // ! Contacts === Contacts === Contacts === Contacts === Contacts
 // ! Contacts === Contacts === Contacts === Contacts === Contacts
 .contacts {
+   background-color: $grey;
+   color: $light;
    position: relative;
    &:after {
       content: "";
@@ -1210,8 +1182,6 @@ section {
 
    &__container {
       @extend %container;
-      position: relative;
-      z-index: 1;
       @media (max-width: 768px) {
          padding-top: 70px;
          padding-bottom: 20px;
@@ -1227,23 +1197,22 @@ section {
    // .contacts__title
 
    &__title {
-      display: block;
       max-width: max-content;
+      font-weight: 700;
       color: $light;
-      @media (min-width: 769px) {
-         grid-column: 1/12;
-      }
       position: relative;
-      // ! new
       &:after {
          content: "";
          position: absolute;
-         left: 10% !important;
-         right: -20% !important;
-         height: 5px !important;
+         left: 10%;
+         right: -20%;
+         height: 5px;
          border-radius: 20px;
          background: $light;
          bottom: -10px;
+      }
+      @media (min-width: 769px) {
+         grid-column: 1/12;
       }
    }
 
@@ -1273,19 +1242,6 @@ section {
          &:active {
             color: $green;
          }
-      }
-   }
-   // .contacts__items
-
-   &__items {
-      @media (max-width: 768px) {
-         margin-bottom: 40px;
-         .items__item {
-            justify-content: flex-start;
-         }
-      }
-      @media (min-width: 769px) {
-         grid-column: 1/7;
       }
    }
 
