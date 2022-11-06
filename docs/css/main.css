@@ -752,23 +752,38 @@ section:nth-child(even) {
   column-gap: 37px;
 }
 
-.items__icon {
-  flex: 0 0 60px;
+.items__item:nth-child(3) .items__icon path {
+  fill: #eeeeee;
 }
 
-.items__icon svg {
-  background-color: #48a748;
+.items__item:nth-child(4) .items__icon svg {
+  width: 35px;
+}
+
+.items__item:nth-child(4) .items__icon svg rect,
+.items__item:nth-child(4) .items__icon svg polyline {
+  stroke: #eeeeee;
+  fill: transparent;
+}
+
+.items__icon {
+  flex: 0 0 70px;
+  width: 70px;
+  height: 70px;
   background: linear-gradient(90deg, rgb(0, 144, 19) 0%, rgb(0, 232, 0) 100%);
   border: 3px solid #fff;
   border-radius: 50%;
   padding: 10px;
-  width: 100%;
-  height: auto;
-  fill: #eeeeee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.items__icon img {
+.items__icon svg {
   max-width: 100%;
+  width: 50px;
+  height: auto;
+  fill: #eeeeee;
 }
 
 .items__title {
@@ -972,6 +987,60 @@ section:nth-child(even) {
 
 .home__pulse:nth-child(12) .ringring {
   animation-delay: 1.2s;
+}
+
+.home__pulse:nth-child(13) {
+  top: 68%;
+  left: 47.95%;
+}
+
+.home__pulse:nth-child(13) .ringring {
+  animation-delay: 1s;
+}
+
+.home__pulse:nth-child(14) {
+  top: 79%;
+  left: 32.8%;
+}
+
+.home__pulse:nth-child(14) .ringring {
+  animation-delay: 0s;
+}
+
+.home__pulse:nth-child(15) {
+  top: 49%;
+  left: 24.58%;
+}
+
+.home__pulse:nth-child(15) .ringring {
+  animation-delay: 0.2s;
+}
+
+.home__pulse:nth-child(16) {
+  top: 59.6%;
+  left: 23.7%;
+}
+
+.home__pulse:nth-child(16) .ringring {
+  animation-delay: 0.4s;
+}
+
+.home__pulse:nth-child(17) {
+  top: 57.2%;
+  left: 15.4%;
+}
+
+.home__pulse:nth-child(17) .ringring {
+  animation-delay: 0.6s;
+}
+
+.home__pulse:nth-child(18) {
+  top: 53%;
+  left: 12%;
+}
+
+.home__pulse:nth-child(18) .ringring {
+  animation-delay: 0.8s;
 }
 
 .home__pulse-wrapper {
@@ -1284,7 +1353,7 @@ section:nth-child(even) {
 }
 
 .services-item:hover {
-  transform: scale(1.02);
+  transform: scale(1.02) !important;
 }
 
 .services-item__image {
@@ -1571,12 +1640,14 @@ section:nth-child(even) {
     padding-bottom: 14vw;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    margin-top: -68px;
   }
 
   .products__title {
     grid-column: 1/12;
     font-size: 4.375rem;
     line-height: 1.25;
+    padding-bottom: 68px;
   }
 
   .products__content {
