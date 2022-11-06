@@ -117,9 +117,9 @@
 							<div class="home__text">
 								<p>In the world of raw materials, we </p>
 								<ul>
-									<li>explore,</li>
-									<li>discover,</li>
-									<li>& assure</li>
+									<li data-animate data-animate-from-left>explore,</li>
+									<li data-animate data-animate-from-left>discover,</li>
+									<li data-animate data-animate-from-left>& assure</li>
 								</ul>
 							</div>
 						</div>
@@ -133,7 +133,7 @@
 					<!-- <h2 class="about__title title">About Us</h2> -->
 					<!-- <h2 class="about__title title">About Us</h2> -->
 					<div data-parallax-parents class="about__content content">
-						<div data-parallax-elements class="about__left">
+						<div data-animate data-animate-from-left data-parallax-elements class="about__left">
 							<h3 class="about__subtitle subtitle">Who we are?</h3>
 							<p class="about__text">We are a tightly-knit team of industry specialists and traders with decades-long exposure to global polymer markets. This has placed us into a position of having supply agreements with both virgin and recycled plastic producers worldwide, especially in East Asia, Europe and North America.</p>
 							<p class="about__text">However, the company’s core emphasis lies in the trading and promotion of recycled materials, wherever possible. The truly circular economy may still not be here, but we and our partners do what we can to bring it a notch closer.</p>
@@ -141,8 +141,8 @@
 							<p class="about__text">What drives us is the mutual benefit and success of all parties involved in our partnership. This is achieved through transparent trading, flawless supply chain management and consistent competitive results, where each client can have a tailor-made solution that reflects their particular requirement.</p>
 						</div>
 						<div data-parallax-elements class="about__right items">
-							<h3 class="about__text subtitle">What can we offer?</h3>
-							<div class="items__item">
+							<h3 data-animate data-animate-from-right class="about__text subtitle">What can we offer?</h3>
+							<div data-animate data-animate-from-right class="items__item">
 								<div class='items__icon'>
 									@@include('./components/icons/_about-1.html')
 								</div>
@@ -151,7 +151,7 @@
 									<p class="items__text">Direct access to various recycled and non-recycled plastics</p>
 								</div>
 							</div>
-							<div class="items__item">
+							<div data-animate data-animate-from-right class="items__item">
 								<div class='items__icon'>
 									@@include('./components/icons/_about-2.html')
 								</div>
@@ -160,7 +160,7 @@
 									<p class="items__text">An expanding network of plastic producers across the world</p>
 								</div>
 							</div>
-							<div class="items__item">
+							<div data-animate data-animate-from-right class="items__item">
 								<div class='items__icon'>
 									@@include('./components/icons/_about-3.html')
 								</div>
@@ -169,7 +169,7 @@
 									<p class="items__text">Consistent, competitive and transparent pricing to support your business development</p>
 								</div>
 							</div>
-							<div class="items__item">
+							<div data-animate data-animate-from-right class="items__item">
 								<div class='items__icon'>
 									@@include('./components/icons/_about-4.html')
 								</div>
@@ -185,7 +185,7 @@
 			<!-- new text -->
 			<section id="our-products" class="products">
 				<div class="products__container">
-					<h2 class="products__title title">Our Products</h2>
+					<h2 data-animate data-animate-from-top class="products__title title">Our Products</h2>
 					<div class="products__content content">
 						<div class="products__item">
 							<div class='products__image products__image_1'>
@@ -194,7 +194,7 @@
 									<img src='@img/gallery/flakes-cutted.png' alt='Product photo'>
 								</picture>
 							</div>
-							<div class="products__text">
+							<div data-animate data-animate-from-right class="products__text">
 								<h4 class="products__item-title subtitle">Flake</h4>
 								<p class="products__item-text">JV Explore offers customers a range of virgin, as well as primarily post-consumer recycled (PCR) and post-industrial flakes. Our super-clean hot washed PET flake is suitable for processing in bottle-to-bottle applications. Other polyethylene products we can provide are PCR and post-industrial rHDPE, as well as post-industrial polypropylene (rPP).</p>
 							</div>
@@ -206,13 +206,13 @@
 									<img src='@img/gallery/pellets-cutted.png' alt='Product photo'>
 								</picture>
 							</div>
-							<div class="products__text">
+							<div data-animate data-animate-from-left class="products__text">
 								<h4 class="products__item-title subtitle">Pellets</h4>
 								<p class="products__item-text">JV Explore can also supply polymers in the form of pellets (granules), such as rHDPE, rLDPE and rPP. For each of these products we make sure to provide comprehensive specifications, as well as scientific analysis results and proof of compliance for local legislation.</p>
 							</div>
 						</div>
 					</div>
-					<p class="products__info">For more information, such availability, specifications and pricing, please write us at <a href="mailto:info@jvexplore.com">info@jvexplore.com</a></p>
+					<p data-animate data-animate-from-bottom class="products__info">For more information, such availability, specifications and pricing, please write us at <a href="mailto:info@jvexplore.com">info@jvexplore.com</a></p>
 				</div>
 			</section>
 			<section id="our-services" class="services">
@@ -231,9 +231,9 @@
 							</picture>
 						</div>
 					</div>
-					<h2 class="services__title title">Our Services</h2>
+					<h2 data-animate data-animate-from-top class="services__title title">Our Services</h2>
 					<div class="services__content">
-						<div class="services__item services-item">
+						<div data-animate-scale class="services__item services-item">
 							<div class='services-item__image'>
 								@@include('./components/icons/_services-1.html')
 							</div>
@@ -250,7 +250,7 @@
 								</ul>
 							</div>
 						</div>
-						<div class="services__item services-item">
+						<div data-animate-scale class="services__item services-item">
 							<div class='services-item__image'>
 								@@include('./components/icons/_services-2.html')
 							</div>
@@ -261,8 +261,8 @@
 								<p class="services-item__text">Through our network of suppliers we can always ensure the most up-to-date information about offers and the execution of orders. Our approach enables us to adapt to changing customer demands and market conditions on a global scale, making sure we buy materials of the highest quality to satisfy our customers’ demands.</p>
 							</div>
 						</div>
-						<div class="services__item services-item">
-							<div class='services-item__image'>
+						<div data-animate-scale class="services__item services-item">
+							<div class='services-item__image services-item__image_3'>
 								@@include('./components/icons/_services-3.html')
 							</div>
 							<h4 class="services-item__title">
@@ -272,9 +272,10 @@
 								<p class="services-item__text">JV Explore’s financial insight, as well as close relationships with US banks and insurance providers create the best possible payment conditions for all parties involved. This allows for greater flexibility and the ability to modify solutions at all stages of the supply chain. We make business smoother by buying products on suppliers’ terms and delivering the goods to the customer on their desired terms.</p>
 							</div>
 						</div>
-						<div class="services__item services-item">
-							<div class='services-item__image'>
+						<div data-animate-scale class="services__item services-item">
+							<div class='services-item__image services-item__image_4'>
 								@@include('./components/icons/_services-4.html')
+								<img src="@img/services/ship1.svg" alt="Ship icon">
 							</div>
 							<h4 class="services-item__title">
 								Logistics
