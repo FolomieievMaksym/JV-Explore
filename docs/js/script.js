@@ -9,12 +9,12 @@
 //    if (newEl) return newEl;
 // }
 
-import {} from "./lazy.js";
 import {} from "./menu.js";
 import {} from "./parallax.js";
-import {} from "./spoiler.js";
-import {} from "./accordion.js";
 import {} from "./animate.js";
-import {} from "./pop-up-video.js";
-import {} from "./pop-up.js";
-import {} from "./slider.js";
+// import {} from "./lazy.js";
+// import {} from "./spoiler.js";
+// import {} from "./accordion.js";
+// import {} from "./pop-up-video.js";
+// import {} from "./pop-up.js";
+// import {} from "./slider.js";

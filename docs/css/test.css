@@ -124,6 +124,53 @@ body.test .hero__container,
 }
 
 @font-face {
+  font-family: "Catamaran";
+  font-display: swap;
+  src: url("../fonts/Catamaran-Regular.woff") format("woff"), url("../fonts/Catamaran-Regular.woff-2") format("woff-2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Catamaran";
+  font-display: swap;
+  src: url("../fonts/Catamaran-Meidum.woff") format("woff"), url("../fonts/Catamaran-Meidum.woff-2") format("woff-2");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Catamaran";
+  font-display: swap;
+  src: url("../fonts/Catamaran-SemiBold.woff") format("woff"), url("../fonts/Catamaran-SemiBold.woff-2") format("woff-2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Catamaran";
+  font-display: swap;
+  src: url("../fonts/Catamaran-Bold.woff") format("woff"), url("../fonts/Catamaran-Bold.woff-2") format("woff-2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Catamaran";
+  font-display: swap;
+  src: url("../fonts/Catamaran-ExtraBold.woff") format("woff"), url("../fonts/Catamaran-ExtraBold.woff-2") format("woff-2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Catamaran";
+  font-display: swap;
+  src: url("../fonts/Catamaran-Black.woff") format("woff"), url("../fonts/Catamaran-Black.woff-2") format("woff-2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Nunito";
   font-display: swap;
   src: url("../fonts/Nunito-Regular.woff") format("woff"), url("../fonts/Nunito-Regular.woff-2") format("woff-2");
@@ -154,6 +201,84 @@ body.test .hero__container,
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Philosopher";
+  font-display: swap;
+  src: url("../fonts/Philosopher-Regular.woff") format("woff"), url("../fonts/Philosopher-Regular.woff-2") format("woff-2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Philosopher";
+  font-display: swap;
+  src: url("../fonts/Philosopher-Bold.woff") format("woff"), url("../fonts/Philosopher-Bold.woff-2") format("woff-2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  font-display: swap;
+  src: url("../fonts/Quicksand-Regular.woff") format("woff"), url("../fonts/Quicksand-Regular.woff-2") format("woff-2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  font-display: swap;
+  src: url("../fonts/Quicksand-Meidum.woff") format("woff"), url("../fonts/Quicksand-Meidum.woff-2") format("woff-2");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  font-display: swap;
+  src: url("../fonts/Quicksand-SemiBold.woff") format("woff"), url("../fonts/Quicksand-SemiBold.woff-2") format("woff-2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  font-display: swap;
+  src: url("../fonts/Quicksand-Bold.woff") format("woff"), url("../fonts/Quicksand-Bold.woff-2") format("woff-2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "YanoneKaffeesatz";
+  font-display: swap;
+  src: url("../fonts/YanoneKaffeesatz-Regular.woff") format("woff"), url("../fonts/YanoneKaffeesatz-Regular.woff-2") format("woff-2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "YanoneKaffeesatz";
+  font-display: swap;
+  src: url("../fonts/YanoneKaffeesatz-Meidum.woff") format("woff"), url("../fonts/YanoneKaffeesatz-Meidum.woff-2") format("woff-2");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "YanoneKaffeesatz";
+  font-display: swap;
+  src: url("../fonts/YanoneKaffeesatz-SemiBold.woff") format("woff"), url("../fonts/YanoneKaffeesatz-SemiBold.woff-2") format("woff-2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "YanoneKaffeesatz";
+  font-display: swap;
+  src: url("../fonts/YanoneKaffeesatz-Bold.woff") format("woff"), url("../fonts/YanoneKaffeesatz-Bold.woff-2") format("woff-2");
+  font-weight: 700;
+  font-style: normal;
+}
+
 body.lock {
   overflow: hidden;
 }
@@ -161,7 +286,11 @@ body.lock {
 body {
   background-color: #ddd;
   background-color: #fff;
+  font-family: "Catamaran";
   font-family: "Nunito";
+  font-family: "Philosopher";
+  font-family: "Quicksand";
+  font-family: "YanoneKaffeesatz";
 }
 
 .wrapper {
