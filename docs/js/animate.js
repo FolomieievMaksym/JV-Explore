@@ -56,9 +56,16 @@ itemsToAnimate.forEach((el) => {
 window.addEventListener("scroll", showAnimatedItems);
 function showAnimatedItems(e) {
    itemsToAnimate.forEach((el) => {
-      if (el.getBoundingClientRect().top <= viewportHeight / 1.2) {
-         el.style.transform = "translate(0)";
-         el.style.opacity = "1";
+      if (window.innerWidth < 769) {
+         if (el.getBoundingClientRect().top <= viewportHeight / 1.2) {
+            el.style.transform = "translate(0)";
+            el.style.opacity = "1";
+         }
+      } else {
+         if (el.getBoundingClientRect().top <= viewportHeight / 1.3) {
+            el.style.transform = "translate(0)";
+            el.style.opacity = "1";
+         }
       }
    });
    itemsToAnimateScale.forEach((el) => {

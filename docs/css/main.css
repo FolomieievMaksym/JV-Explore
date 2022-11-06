@@ -985,7 +985,7 @@ section:nth-child(even) {
 }
 
 .home__pulse:nth-child(15) .ringring {
-  animation-delay: 0.2s;
+  animation-delay: 0.4s;
 }
 
 .home__pulse:nth-child(16) {
@@ -994,7 +994,7 @@ section:nth-child(even) {
 }
 
 .home__pulse:nth-child(16) .ringring {
-  animation-delay: 0.4s;
+  animation-delay: 0.2s;
 }
 
 .home__pulse:nth-child(17) {
@@ -1003,7 +1003,7 @@ section:nth-child(even) {
 }
 
 .home__pulse:nth-child(17) .ringring {
-  animation-delay: 0.6s;
+  animation-delay: 0.4s;
 }
 
 .home__pulse:nth-child(18) {
@@ -1012,7 +1012,7 @@ section:nth-child(even) {
 }
 
 .home__pulse:nth-child(18) .ringring {
-  animation-delay: 0.8s;
+  animation-delay: 0.6s;
 }
 
 .home__pulse-wrapper {
