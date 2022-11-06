@@ -753,6 +753,11 @@ section:nth-child(even) {
   flex: 0 0 60px;
 }
 
+.items__icon svg {
+  width: 100%;
+  height: auto;
+}
+
 .items__icon img {
   max-width: 100%;
 }
@@ -1181,6 +1186,10 @@ section:nth-child(even) {
   margin-bottom: 20px;
 }
 
+.services-item__image svg {
+  height: auto;
+}
+
 .services-item__title {
   display: inline-block;
   color: #48a748;
@@ -1484,6 +1493,10 @@ section:nth-child(even) {
     gap: 35px;
   }
 
+  .services-item__image svg {
+    max-width: 7vmax;
+  }
+
   .services-item__image img {
     max-width: 7vmax;
   }
@@ -1762,6 +1775,10 @@ section:nth-child(even) {
     order: 1;
     font-size: 2.5rem;
     line-height: 1.25;
+  }
+
+  .services-item__image svg {
+    max-width: 90px;
   }
 
   .services-item__image img {
