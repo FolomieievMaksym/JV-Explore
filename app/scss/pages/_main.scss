@@ -56,14 +56,14 @@ section {
    @media (min-width: 769px) {
       row-gap: 50px;
    }
-   // .about-items__item
+   // .items__item
 
    &__item {
       // display: flex;
       // justify-content: flex-end;
       // align-items: flex-start;
       display: grid;
-      grid-template-columns: 60px 1fr;
+      grid-template-columns: 15% 1fr;
       column-gap: 15px;
    }
 
@@ -534,6 +534,7 @@ section {
    &__content {
       @media (min-width: 769px) {
          align-items: center;
+         // align-items: start !important;
       }
    }
 
