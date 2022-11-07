@@ -139,6 +139,22 @@ body.test .hero__container,
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Quicksand";
+  font-display: swap;
+  src: url("../fonts/Quicksand-SemiBold.woff") format("woff"), url("../fonts/Quicksand-SemiBold.woff-2") format("woff-2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  font-display: swap;
+  src: url("../fonts/Quicksand-Bold.woff") format("woff"), url("../fonts/Quicksand-Bold.woff-2") format("woff-2");
+  font-weight: 700;
+  font-style: normal;
+}
+
 body.lock {
   overflow: hidden;
 }

@@ -60,11 +60,17 @@ parallaxImages.forEach((el) => {
    el.style.transition = "opacity 2s ease 1s";
 });
 
+let viewNum;
 parallaxImage();
 function parallaxImage(e) {
    parallaxImages.forEach((el) => {
+      if (window.innerWidth < 769) {
+         viewNum = 0.9;
+      } else {
+         viewNum = 1;
+      }
       if (
-         el.getBoundingClientRect().top <= viewportTop / 1 &&
+         el.getBoundingClientRect().top <= viewportTop / viewNum &&
          el.getBoundingClientRect().top + el.getBoundingClientRect().height > 0
       ) {
          el.style.opacity = "1";
@@ -86,7 +92,7 @@ parallaxShip();
 function parallaxShip(e) {
    parallaxShipInCircle.forEach((el) => {
       if (
-         el.getBoundingClientRect().top <= viewportTop / 1 &&
+         el.getBoundingClientRect().top <= viewportTop / 0.9 &&
          (el.getBoundingClientRect().top + el.getBoundingClientRect().height) / 2 > 0
       ) {
          shipHeight = el.getBoundingClientRect().height;
