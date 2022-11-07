@@ -191,8 +191,12 @@ body.lock {
 }
 
 .body {
-  background-color: #ddd;
   background-color: #fff;
+  font-family: "Catamaran";
+}
+
+section,
+a {
   font-family: "Catamaran";
 }
 
