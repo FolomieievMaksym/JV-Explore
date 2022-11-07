@@ -127,6 +127,30 @@ input[type=submit],
 }
 
 @font-face {
+  font-family: "Catamaran";
+  font-display: swap;
+  src: url("../fonts/Catamaran-Regular.woff") format("woff"), url("../fonts/Catamaran-Regular.woff-2") format("woff-2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Catamaran";
+  font-display: swap;
+  src: url("../fonts/Catamaran-SemiBold.woff") format("woff"), url("../fonts/Catamaran-SemiBold.woff-2") format("woff-2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Catamaran";
+  font-display: swap;
+  src: url("../fonts/Catamaran-Bold.woff") format("woff"), url("../fonts/Catamaran-Bold.woff-2") format("woff-2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Philosopher";
   font-display: swap;
   src: url("../fonts/Philosopher-Bold.woff") format("woff"), url("../fonts/Philosopher-Bold.woff-2") format("woff-2");
@@ -169,7 +193,7 @@ body.lock {
 .body {
   background-color: #ddd;
   background-color: #fff;
-  font-family: "Quicksand";
+  font-family: "Catamaran";
 }
 
 .wrapper {
