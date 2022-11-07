@@ -742,6 +742,8 @@
    &__title {
       color: $dark;
       font-weight: 700;
+      position: relative;
+      z-index: 2;
       @media (max-width: 568px) {
          @include fl(40);
       }
@@ -804,6 +806,7 @@
 
    &__image {
       position: relative;
+      z-index: -1;
       img {
          position: absolute;
          top: 0;
@@ -1068,6 +1071,8 @@
 
    &__content {
       display: grid;
+      position: relative;
+      z-index: 2;
       @media (max-width: 568px) {
          grid-template-columns: 1fr;
       }

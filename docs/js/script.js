@@ -10,8 +10,8 @@
 // }
 
 import {} from "./menu.js";
-import {} from "./parallax.js";
 import {} from "./animate.js";
+import {} from "./parallax.js";
 // import {} from "./lazy.js";
 // import {} from "./spoiler.js";
 // import {} from "./accordion.js";
