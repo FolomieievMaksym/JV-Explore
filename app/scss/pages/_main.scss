@@ -1,3 +1,11 @@
+.home {
+   @media (max-width: 768px) {
+      padding-top: 61px;
+   }
+   @media (min-width: 769px) {
+      padding-top: 81px;
+   }
+}
 .title {
    // color: $dark;
    // font-weight: 700;
