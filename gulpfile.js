@@ -253,4 +253,4 @@ exports.fonts = fonts;
 exports.watcher = watcher;
 
 exports.default = gulp.series(cleanSoft, gulp.parallel(html, scss, js, img), watcher);
-exports.build = gulp.series(clean, gulp.parallel(htmlMin, fonts, scss, js, img), watcher);
+exports.build = gulp.series(clean, gulp.parallel(html, fonts, scss, js, img), watcher);
