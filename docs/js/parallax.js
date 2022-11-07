@@ -19,7 +19,10 @@ parallaxElement.forEach((el) => {
 parallaxHome();
 function parallaxHome(e) {
    parallaxParent.forEach((el) => {
-      if (el.getBoundingClientRect().top <= viewportTop / 1) {
+      if (
+         el.getBoundingClientRect().top <= viewportTop / 1 &&
+         el.getBoundingClientRect().top + el.getBoundingClientRect().height > 0
+      ) {
          if (
             el.firstElementChild.getBoundingClientRect().height >
             el.firstElementChild.nextElementSibling.getBoundingClientRect().height
@@ -28,24 +31,12 @@ function parallaxHome(e) {
          } else {
             smallerElement = el.firstElementChild;
          }
-         console.clear();
-         console.log("Высота экрана = " + viewportTop);
-         console.log("Позиция в документе(Rect().top) = " + smallerElement.getBoundingClientRect().top);
-         console.log("Прокрутка сверху(pageYOffset) = " + window.pageYOffset);
          parentHeight = el.getBoundingClientRect().height;
-         console.log("Высота родителя = " + parentHeight);
          smallerElementHeight = smallerElement.getBoundingClientRect().height;
-         console.log("Высота блока = " + smallerElementHeight);
          heightDifference = parentHeight - smallerElementHeight;
-         console.log("Разница высот = " + heightDifference);
          smallerElementSpeed = parentHeight / heightDifference;
-         console.log("Скорость сдвига(parentHeight / heightDifference) = " + smallerElementSpeed);
          tranfsorm = window.pageYOffset / smallerElementSpeed; // ! Home
-         console.log("Трансформ = " + tranfsorm);
          currentTransform = parseInt(smallerElement.style.transform.match(/[-0-9.]+(?=px)/));
-         console.log("Текущий трансформ на блоке = " + currentTransform);
-         console.log(smallerElement);
-         // ! home
          if (
             (currentTransform < heightDifference ||
                window.pageYOffset < heightDifference ||
@@ -68,7 +59,45 @@ parallaxImages.forEach((el) => {
    el.style.opacity = "0";
    el.style.transition = "opacity 2s ease 1s";
 });
-//! BACKUP (ALMOST NORMAL)
+
+parallaxImage();
+function parallaxImage(e) {
+   parallaxImages.forEach((el) => {
+      if (
+         el.getBoundingClientRect().top <= viewportTop / 1 &&
+         el.getBoundingClientRect().top + el.getBoundingClientRect().height > 0
+      ) {
+         el.style.opacity = "1";
+         elHeight = el.getBoundingClientRect().height;
+         elPosition = window.pageYOffset + el.getBoundingClientRect().top;
+         elSpeed = elHeight / el.nextElementSibling.getBoundingClientRect().height;
+         tranfsorm = (window.pageYOffset / elPosition) * elHeight - elHeight;
+         el.style.transform = `translateY(${tranfsorm}px)`;
+      }
+   });
+}
+
+window.addEventListener("scroll", parallaxShip);
+let parallaxShipInCircle = document.querySelectorAll("[data-parallax-ship]");
+let shipHeight;
+let shipSpeed;
+let shipPosition;
+parallaxShip();
+function parallaxShip(e) {
+   parallaxShipInCircle.forEach((el) => {
+      if (
+         el.getBoundingClientRect().top <= viewportTop / 1 &&
+         (el.getBoundingClientRect().top + el.getBoundingClientRect().height) / 2 > 0
+      ) {
+         shipHeight = el.getBoundingClientRect().height;
+         shipPosition = window.pageYOffset + el.getBoundingClientRect().top;
+         tranfsorm = (window.pageYOffset / shipPosition) * shipHeight - shipHeight;
+         el.style.transform = `translate(${tranfsorm}px, -50%)`;
+      }
+   });
+}
+
+//! BACKUP
 // parallaxImage();
 // function parallaxImage(e) {
 //    parallaxImages.forEach((el) => {
@@ -93,28 +122,3 @@ parallaxImages.forEach((el) => {
 //       }
 //    });
 // }
-parallaxImage();
-function parallaxImage(e) {
-   parallaxImages.forEach((el) => {
-      if (el.getBoundingClientRect().top <= viewportTop / 1) {
-         el.style.opacity = "1";
-         console.clear();
-         console.log("Позиция в документе(Rect().top) = " + el.getBoundingClientRect().top);
-         console.log("Прокрутка сверху(pageYOffset) = " + window.pageYOffset);
-         elHeight = el.getBoundingClientRect().height;
-         console.log("Высота блока = " + elHeight);
-         elPosition = window.pageYOffset + el.getBoundingClientRect().top;
-         console.log("Summ = " + elPosition);
-         elSpeed = elHeight / el.nextElementSibling.getBoundingClientRect().height;
-         console.log("Speed = " + elSpeed);
-         tranfsorm = (window.pageYOffset / elPosition) * elHeight - elHeight;
-         console.log("Трансформ = " + tranfsorm);
-         console.log(el);
-
-         // ! Products
-         if (true) {
-            el.style.transform = `translateY(${tranfsorm}px)`;
-         }
-      }
-   });
-}
